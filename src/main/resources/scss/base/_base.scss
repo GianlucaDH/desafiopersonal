@@ -1,0 +1,19 @@
+@use '../abstracts/variables';
+
+html, body {
+    font-family: var(--font-poppins);
+}
+
+button {
+    background-color: var(--lime-color);
+    color: var(--white-color);
+    font-size: 1em;
+    border-radius: 5px;
+    padding: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        cursor: pointer;
+        background-color: var(--lime-pressed);
+    }
+}

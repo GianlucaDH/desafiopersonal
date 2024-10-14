@@ -1,0 +1,4764 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /*fonts*/
+    --font-poppins: 'Poppins', sans-serif;
+
+    /*colors*/
+    --white-color: #fff;
+    --black-color: #000;
+    --lime-color: #009688;
+    --lime-pressed: #00796B;
+    --blue-color: #283593;
+    --red-color: #F44336;
+    --red-pressed: #D32F2F;
+}
+$icomoon-font-family: "desafio" !default;
+$icomoon-font-path: "../fonts" !default;
+
+$desafio-asterisk: unquote('"\\f069"');
+$desafio-plus: unquote('"\\f067"');
+$desafio-question: unquote('"\\f128"');
+$desafio-minus: unquote('"\\f068"');
+$desafio-glass: unquote('"\\f000"');
+$desafio-music: unquote('"\\f001"');
+$desafio-search: unquote('"\\f002"');
+$desafio-envelope-o: unquote('"\\f003"');
+$desafio-heart: unquote('"\\f004"');
+$desafio-star: unquote('"\\f005"');
+$desafio-star-o: unquote('"\\f006"');
+$desafio-user: unquote('"\\f007"');
+$desafio-film: unquote('"\\f008"');
+$desafio-th-large: unquote('"\\f009"');
+$desafio-th: unquote('"\\f00a"');
+$desafio-th-list: unquote('"\\f00b"');
+$desafio-check: unquote('"\\f00c"');
+$desafio-close: unquote('"\\f00d"');
+$desafio-remove: unquote('"\\f00d"');
+$desafio-times: unquote('"\\f00d"');
+$desafio-search-plus: unquote('"\\f00e"');
+$desafio-search-minus: unquote('"\\f010"');
+$desafio-power-off: unquote('"\\f011"');
+$desafio-signal: unquote('"\\f012"');
+$desafio-cog: unquote('"\\f013"');
+$desafio-gear: unquote('"\\f013"');
+$desafio-trash-o: unquote('"\\f014"');
+$desafio-home: unquote('"\\f015"');
+$desafio-file-o: unquote('"\\f016"');
+$desafio-clock-o: unquote('"\\f017"');
+$desafio-road: unquote('"\\f018"');
+$desafio-download: unquote('"\\f019"');
+$desafio-arrow-circle-o-down: unquote('"\\f01a"');
+$desafio-arrow-circle-o-up: unquote('"\\f01b"');
+$desafio-inbox: unquote('"\\f01c"');
+$desafio-play-circle-o: unquote('"\\f01d"');
+$desafio-repeat: unquote('"\\f01e"');
+$desafio-rotate-right: unquote('"\\f01e"');
+$desafio-refresh: unquote('"\\f021"');
+$desafio-list-alt: unquote('"\\f022"');
+$desafio-lock: unquote('"\\f023"');
+$desafio-flag: unquote('"\\f024"');
+$desafio-headphones: unquote('"\\f025"');
+$desafio-volume-off: unquote('"\\f026"');
+$desafio-volume-down: unquote('"\\f027"');
+$desafio-volume-up: unquote('"\\f028"');
+$desafio-qrcode: unquote('"\\f029"');
+$desafio-barcode: unquote('"\\f02a"');
+$desafio-tag: unquote('"\\f02b"');
+$desafio-tags: unquote('"\\f02c"');
+$desafio-book: unquote('"\\f02d"');
+$desafio-bookmark: unquote('"\\f02e"');
+$desafio-print: unquote('"\\f02f"');
+$desafio-camera: unquote('"\\f030"');
+$desafio-font: unquote('"\\f031"');
+$desafio-bold: unquote('"\\f032"');
+$desafio-italic: unquote('"\\f033"');
+$desafio-text-height: unquote('"\\f034"');
+$desafio-text-width: unquote('"\\f035"');
+$desafio-align-left: unquote('"\\f036"');
+$desafio-align-center: unquote('"\\f037"');
+$desafio-align-right: unquote('"\\f038"');
+$desafio-align-justify: unquote('"\\f039"');
+$desafio-list: unquote('"\\f03a"');
+$desafio-dedent: unquote('"\\f03b"');
+$desafio-outdent: unquote('"\\f03b"');
+$desafio-indent: unquote('"\\f03c"');
+$desafio-video-camera: unquote('"\\f03d"');
+$desafio-image: unquote('"\\f03e"');
+$desafio-photo: unquote('"\\f03e"');
+$desafio-picture-o: unquote('"\\f03e"');
+$desafio-pencil: unquote('"\\f040"');
+$desafio-map-marker: unquote('"\\f041"');
+$desafio-adjust: unquote('"\\f042"');
+$desafio-tint: unquote('"\\f043"');
+$desafio-edit: unquote('"\\f044"');
+$desafio-pencil-square-o: unquote('"\\f044"');
+$desafio-share-square-o: unquote('"\\f045"');
+$desafio-check-square-o: unquote('"\\f046"');
+$desafio-arrows: unquote('"\\f047"');
+$desafio-step-backward: unquote('"\\f048"');
+$desafio-fast-backward: unquote('"\\f049"');
+$desafio-backward: unquote('"\\f04a"');
+$desafio-play: unquote('"\\f04b"');
+$desafio-pause: unquote('"\\f04c"');
+$desafio-stop: unquote('"\\f04d"');
+$desafio-forward: unquote('"\\f04e"');
+$desafio-fast-forward: unquote('"\\f050"');
+$desafio-step-forward: unquote('"\\f051"');
+$desafio-eject: unquote('"\\f052"');
+$desafio-chevron-left: unquote('"\\f053"');
+$desafio-chevron-right: unquote('"\\f054"');
+$desafio-plus-circle: unquote('"\\f055"');
+$desafio-minus-circle: unquote('"\\f056"');
+$desafio-times-circle: unquote('"\\f057"');
+$desafio-check-circle: unquote('"\\f058"');
+$desafio-question-circle: unquote('"\\f059"');
+$desafio-info-circle: unquote('"\\f05a"');
+$desafio-crosshairs: unquote('"\\f05b"');
+$desafio-times-circle-o: unquote('"\\f05c"');
+$desafio-check-circle-o: unquote('"\\f05d"');
+$desafio-ban: unquote('"\\f05e"');
+$desafio-arrow-left: unquote('"\\f060"');
+$desafio-arrow-right: unquote('"\\f061"');
+$desafio-arrow-up: unquote('"\\f062"');
+$desafio-arrow-down: unquote('"\\f063"');
+$desafio-mail-forward: unquote('"\\f064"');
+$desafio-share: unquote('"\\f064"');
+$desafio-expand: unquote('"\\f065"');
+$desafio-compress: unquote('"\\f066"');
+$desafio-exclamation-circle: unquote('"\\f06a"');
+$desafio-gift: unquote('"\\f06b"');
+$desafio-leaf: unquote('"\\f06c"');
+$desafio-fire: unquote('"\\f06d"');
+$desafio-eye: unquote('"\\f06e"');
+$desafio-eye-slash: unquote('"\\f070"');
+$desafio-exclamation-triangle: unquote('"\\f071"');
+$desafio-warning: unquote('"\\f071"');
+$desafio-plane: unquote('"\\f072"');
+$desafio-calendar: unquote('"\\f073"');
+$desafio-random: unquote('"\\f074"');
+$desafio-comment: unquote('"\\f075"');
+$desafio-magnet: unquote('"\\f076"');
+$desafio-chevron-up: unquote('"\\f077"');
+$desafio-chevron-down: unquote('"\\f078"');
+$desafio-retweet: unquote('"\\f079"');
+$desafio-shopping-cart: unquote('"\\f07a"');
+$desafio-folder: unquote('"\\f07b"');
+$desafio-folder-open: unquote('"\\f07c"');
+$desafio-arrows-v: unquote('"\\f07d"');
+$desafio-arrows-h: unquote('"\\f07e"');
+$desafio-bar-chart: unquote('"\\f080"');
+$desafio-bar-chart-o: unquote('"\\f080"');
+$desafio-twitter-square: unquote('"\\f081"');
+$desafio-facebook-square: unquote('"\\f082"');
+$desafio-camera-retro: unquote('"\\f083"');
+$desafio-key: unquote('"\\f084"');
+$desafio-cogs: unquote('"\\f085"');
+$desafio-gears: unquote('"\\f085"');
+$desafio-comments: unquote('"\\f086"');
+$desafio-thumbs-o-up: unquote('"\\f087"');
+$desafio-thumbs-o-down: unquote('"\\f088"');
+$desafio-star-half: unquote('"\\f089"');
+$desafio-heart-o: unquote('"\\f08a"');
+$desafio-sign-out: unquote('"\\f08b"');
+$desafio-linkedin-square: unquote('"\\f08c"');
+$desafio-thumb-tack: unquote('"\\f08d"');
+$desafio-external-link: unquote('"\\f08e"');
+$desafio-sign-in: unquote('"\\f090"');
+$desafio-trophy: unquote('"\\f091"');
+$desafio-github-square: unquote('"\\f092"');
+$desafio-upload: unquote('"\\f093"');
+$desafio-lemon-o: unquote('"\\f094"');
+$desafio-phone: unquote('"\\f095"');
+$desafio-square-o: unquote('"\\f096"');
+$desafio-bookmark-o: unquote('"\\f097"');
+$desafio-phone-square: unquote('"\\f098"');
+$desafio-twitter: unquote('"\\f099"');
+$desafio-facebook: unquote('"\\f09a"');
+$desafio-facebook-f: unquote('"\\f09a"');
+$desafio-github: unquote('"\\f09b"');
+$desafio-unlock: unquote('"\\f09c"');
+$desafio-credit-card: unquote('"\\f09d"');
+$desafio-feed: unquote('"\\f09e"');
+$desafio-rss: unquote('"\\f09e"');
+$desafio-hdd-o: unquote('"\\f0a0"');
+$desafio-bullhorn: unquote('"\\f0a1"');
+$desafio-bell-o: unquote('"\\f0a2"');
+$desafio-certificate: unquote('"\\f0a3"');
+$desafio-hand-o-right: unquote('"\\f0a4"');
+$desafio-hand-o-left: unquote('"\\f0a5"');
+$desafio-hand-o-up: unquote('"\\f0a6"');
+$desafio-hand-o-down: unquote('"\\f0a7"');
+$desafio-arrow-circle-left: unquote('"\\f0a8"');
+$desafio-arrow-circle-right: unquote('"\\f0a9"');
+$desafio-arrow-circle-up: unquote('"\\f0aa"');
+$desafio-arrow-circle-down: unquote('"\\f0ab"');
+$desafio-globe: unquote('"\\f0ac"');
+$desafio-wrench: unquote('"\\f0ad"');
+$desafio-tasks: unquote('"\\f0ae"');
+$desafio-filter: unquote('"\\f0b0"');
+$desafio-briefcase: unquote('"\\f0b1"');
+$desafio-arrows-alt: unquote('"\\f0b2"');
+$desafio-group: unquote('"\\f0c0"');
+$desafio-users: unquote('"\\f0c0"');
+$desafio-chain: unquote('"\\f0c1"');
+$desafio-link: unquote('"\\f0c1"');
+$desafio-cloud: unquote('"\\f0c2"');
+$desafio-flask: unquote('"\\f0c3"');
+$desafio-cut: unquote('"\\f0c4"');
+$desafio-scissors: unquote('"\\f0c4"');
+$desafio-copy: unquote('"\\f0c5"');
+$desafio-files-o: unquote('"\\f0c5"');
+$desafio-paperclip: unquote('"\\f0c6"');
+$desafio-floppy-o: unquote('"\\f0c7"');
+$desafio-save: unquote('"\\f0c7"');
+$desafio-square: unquote('"\\f0c8"');
+$desafio-bars: unquote('"\\f0c9"');
+$desafio-navicon: unquote('"\\f0c9"');
+$desafio-reorder: unquote('"\\f0c9"');
+$desafio-list-ul: unquote('"\\f0ca"');
+$desafio-list-ol: unquote('"\\f0cb"');
+$desafio-strikethrough: unquote('"\\f0cc"');
+$desafio-underline: unquote('"\\f0cd"');
+$desafio-table: unquote('"\\f0ce"');
+$desafio-magic: unquote('"\\f0d0"');
+$desafio-truck: unquote('"\\f0d1"');
+$desafio-pinterest: unquote('"\\f0d2"');
+$desafio-pinterest-square: unquote('"\\f0d3"');
+$desafio-google-plus-square: unquote('"\\f0d4"');
+$desafio-google-plus: unquote('"\\f0d5"');
+$desafio-money: unquote('"\\f0d6"');
+$desafio-caret-down: unquote('"\\f0d7"');
+$desafio-caret-up: unquote('"\\f0d8"');
+$desafio-caret-left: unquote('"\\f0d9"');
+$desafio-caret-right: unquote('"\\f0da"');
+$desafio-columns: unquote('"\\f0db"');
+$desafio-sort: unquote('"\\f0dc"');
+$desafio-unsorted: unquote('"\\f0dc"');
+$desafio-sort-desc: unquote('"\\f0dd"');
+$desafio-sort-down: unquote('"\\f0dd"');
+$desafio-sort-asc: unquote('"\\f0de"');
+$desafio-sort-up: unquote('"\\f0de"');
+$desafio-envelope: unquote('"\\f0e0"');
+$desafio-linkedin: unquote('"\\f0e1"');
+$desafio-rotate-left: unquote('"\\f0e2"');
+$desafio-undo: unquote('"\\f0e2"');
+$desafio-gavel: unquote('"\\f0e3"');
+$desafio-legal: unquote('"\\f0e3"');
+$desafio-dashboard: unquote('"\\f0e4"');
+$desafio-tachometer: unquote('"\\f0e4"');
+$desafio-comment-o: unquote('"\\f0e5"');
+$desafio-comments-o: unquote('"\\f0e6"');
+$desafio-bolt: unquote('"\\f0e7"');
+$desafio-flash: unquote('"\\f0e7"');
+$desafio-sitemap: unquote('"\\f0e8"');
+$desafio-umbrella: unquote('"\\f0e9"');
+$desafio-clipboard: unquote('"\\f0ea"');
+$desafio-paste: unquote('"\\f0ea"');
+$desafio-lightbulb-o: unquote('"\\f0eb"');
+$desafio-exchange: unquote('"\\f0ec"');
+$desafio-cloud-download: unquote('"\\f0ed"');
+$desafio-cloud-upload: unquote('"\\f0ee"');
+$desafio-user-md: unquote('"\\f0f0"');
+$desafio-stethoscope: unquote('"\\f0f1"');
+$desafio-suitcase: unquote('"\\f0f2"');
+$desafio-bell: unquote('"\\f0f3"');
+$desafio-coffee: unquote('"\\f0f4"');
+$desafio-cutlery: unquote('"\\f0f5"');
+$desafio-file-text-o: unquote('"\\f0f6"');
+$desafio-building-o: unquote('"\\f0f7"');
+$desafio-hospital-o: unquote('"\\f0f8"');
+$desafio-ambulance: unquote('"\\f0f9"');
+$desafio-medkit: unquote('"\\f0fa"');
+$desafio-fighter-jet: unquote('"\\f0fb"');
+$desafio-beer: unquote('"\\f0fc"');
+$desafio-h-square: unquote('"\\f0fd"');
+$desafio-plus-square: unquote('"\\f0fe"');
+$desafio-angle-double-left: unquote('"\\f100"');
+$desafio-angle-double-right: unquote('"\\f101"');
+$desafio-angle-double-up: unquote('"\\f102"');
+$desafio-angle-double-down: unquote('"\\f103"');
+$desafio-angle-left: unquote('"\\f104"');
+$desafio-angle-right: unquote('"\\f105"');
+$desafio-angle-up: unquote('"\\f106"');
+$desafio-angle-down: unquote('"\\f107"');
+$desafio-desktop: unquote('"\\f108"');
+$desafio-laptop: unquote('"\\f109"');
+$desafio-tablet: unquote('"\\f10a"');
+$desafio-mobile: unquote('"\\f10b"');
+$desafio-mobile-phone: unquote('"\\f10b"');
+$desafio-circle-o: unquote('"\\f10c"');
+$desafio-quote-left: unquote('"\\f10d"');
+$desafio-quote-right: unquote('"\\f10e"');
+$desafio-spinner: unquote('"\\f110"');
+$desafio-circle: unquote('"\\f111"');
+$desafio-mail-reply: unquote('"\\f112"');
+$desafio-reply: unquote('"\\f112"');
+$desafio-github-alt: unquote('"\\f113"');
+$desafio-folder-o: unquote('"\\f114"');
+$desafio-folder-open-o: unquote('"\\f115"');
+$desafio-smile-o: unquote('"\\f118"');
+$desafio-frown-o: unquote('"\\f119"');
+$desafio-meh-o: unquote('"\\f11a"');
+$desafio-gamepad: unquote('"\\f11b"');
+$desafio-keyboard-o: unquote('"\\f11c"');
+$desafio-flag-o: unquote('"\\f11d"');
+$desafio-flag-checkered: unquote('"\\f11e"');
+$desafio-terminal: unquote('"\\f120"');
+$desafio-code: unquote('"\\f121"');
+$desafio-mail-reply-all: unquote('"\\f122"');
+$desafio-reply-all: unquote('"\\f122"');
+$desafio-star-half-empty: unquote('"\\f123"');
+$desafio-star-half-full: unquote('"\\f123"');
+$desafio-star-half-o: unquote('"\\f123"');
+$desafio-location-arrow: unquote('"\\f124"');
+$desafio-crop: unquote('"\\f125"');
+$desafio-code-fork: unquote('"\\f126"');
+$desafio-chain-broken: unquote('"\\f127"');
+$desafio-unlink: unquote('"\\f127"');
+$desafio-info: unquote('"\\f129"');
+$desafio-exclamation: unquote('"\\f12a"');
+$desafio-superscript: unquote('"\\f12b"');
+$desafio-subscript: unquote('"\\f12c"');
+$desafio-eraser: unquote('"\\f12d"');
+$desafio-puzzle-piece: unquote('"\\f12e"');
+$desafio-microphone: unquote('"\\f130"');
+$desafio-microphone-slash: unquote('"\\f131"');
+$desafio-shield: unquote('"\\f132"');
+$desafio-calendar-o: unquote('"\\f133"');
+$desafio-fire-extinguisher: unquote('"\\f134"');
+$desafio-rocket: unquote('"\\f135"');
+$desafio-maxcdn: unquote('"\\f136"');
+$desafio-chevron-circle-left: unquote('"\\f137"');
+$desafio-chevron-circle-right: unquote('"\\f138"');
+$desafio-chevron-circle-up: unquote('"\\f139"');
+$desafio-chevron-circle-down: unquote('"\\f13a"');
+$desafio-html5: unquote('"\\f13b"');
+$desafio-css3: unquote('"\\f13c"');
+$desafio-anchor: unquote('"\\f13d"');
+$desafio-unlock-alt: unquote('"\\f13e"');
+$desafio-bullseye: unquote('"\\f140"');
+$desafio-ellipsis-h: unquote('"\\f141"');
+$desafio-ellipsis-v: unquote('"\\f142"');
+$desafio-rss-square: unquote('"\\f143"');
+$desafio-play-circle: unquote('"\\f144"');
+$desafio-ticket: unquote('"\\f145"');
+$desafio-minus-square: unquote('"\\f146"');
+$desafio-minus-square-o: unquote('"\\f147"');
+$desafio-level-up: unquote('"\\f148"');
+$desafio-level-down: unquote('"\\f149"');
+$desafio-check-square: unquote('"\\f14a"');
+$desafio-pencil-square: unquote('"\\f14b"');
+$desafio-external-link-square: unquote('"\\f14c"');
+$desafio-share-square: unquote('"\\f14d"');
+$desafio-compass: unquote('"\\f14e"');
+$desafio-caret-square-o-down: unquote('"\\f150"');
+$desafio-toggle-down: unquote('"\\f150"');
+$desafio-caret-square-o-up: unquote('"\\f151"');
+$desafio-toggle-up: unquote('"\\f151"');
+$desafio-caret-square-o-right: unquote('"\\f152"');
+$desafio-toggle-right: unquote('"\\f152"');
+$desafio-eur: unquote('"\\f153"');
+$desafio-euro: unquote('"\\f153"');
+$desafio-gbp: unquote('"\\f154"');
+$desafio-dollar: unquote('"\\f155"');
+$desafio-usd: unquote('"\\f155"');
+$desafio-inr: unquote('"\\f156"');
+$desafio-rupee: unquote('"\\f156"');
+$desafio-cny: unquote('"\\f157"');
+$desafio-jpy: unquote('"\\f157"');
+$desafio-rmb: unquote('"\\f157"');
+$desafio-yen: unquote('"\\f157"');
+$desafio-rouble: unquote('"\\f158"');
+$desafio-rub: unquote('"\\f158"');
+$desafio-ruble: unquote('"\\f158"');
+$desafio-krw: unquote('"\\f159"');
+$desafio-won: unquote('"\\f159"');
+$desafio-bitcoin: unquote('"\\f15a"');
+$desafio-btc: unquote('"\\f15a"');
+$desafio-file: unquote('"\\f15b"');
+$desafio-file-text: unquote('"\\f15c"');
+$desafio-sort-alpha-asc: unquote('"\\f15d"');
+$desafio-sort-alpha-desc: unquote('"\\f15e"');
+$desafio-sort-amount-asc: unquote('"\\f160"');
+$desafio-sort-amount-desc: unquote('"\\f161"');
+$desafio-sort-numeric-asc: unquote('"\\f162"');
+$desafio-sort-numeric-desc: unquote('"\\f163"');
+$desafio-thumbs-up: unquote('"\\f164"');
+$desafio-thumbs-down: unquote('"\\f165"');
+$desafio-youtube-square: unquote('"\\f166"');
+$desafio-youtube: unquote('"\\f167"');
+$desafio-xing: unquote('"\\f168"');
+$desafio-xing-square: unquote('"\\f169"');
+$desafio-youtube-play: unquote('"\\f16a"');
+$desafio-dropbox: unquote('"\\f16b"');
+$desafio-stack-overflow: unquote('"\\f16c"');
+$desafio-instagram: unquote('"\\f16d"');
+$desafio-flickr: unquote('"\\f16e"');
+$desafio-adn: unquote('"\\f170"');
+$desafio-bitbucket: unquote('"\\f171"');
+$desafio-bitbucket-square: unquote('"\\f172"');
+$desafio-tumblr: unquote('"\\f173"');
+$desafio-tumblr-square: unquote('"\\f174"');
+$desafio-long-arrow-down: unquote('"\\f175"');
+$desafio-long-arrow-up: unquote('"\\f176"');
+$desafio-long-arrow-left: unquote('"\\f177"');
+$desafio-long-arrow-right: unquote('"\\f178"');
+$desafio-apple: unquote('"\\f179"');
+$desafio-windows: unquote('"\\f17a"');
+$desafio-android: unquote('"\\f17b"');
+$desafio-linux: unquote('"\\f17c"');
+$desafio-dribbble: unquote('"\\f17d"');
+$desafio-skype: unquote('"\\f17e"');
+$desafio-foursquare: unquote('"\\f180"');
+$desafio-trello: unquote('"\\f181"');
+$desafio-female: unquote('"\\f182"');
+$desafio-male: unquote('"\\f183"');
+$desafio-gittip: unquote('"\\f184"');
+$desafio-gratipay: unquote('"\\f184"');
+$desafio-sun-o: unquote('"\\f185"');
+$desafio-moon-o: unquote('"\\f186"');
+$desafio-archive: unquote('"\\f187"');
+$desafio-bug: unquote('"\\f188"');
+$desafio-vk: unquote('"\\f189"');
+$desafio-weibo: unquote('"\\f18a"');
+$desafio-renren: unquote('"\\f18b"');
+$desafio-pagelines: unquote('"\\f18c"');
+$desafio-stack-exchange: unquote('"\\f18d"');
+$desafio-arrow-circle-o-right: unquote('"\\f18e"');
+$desafio-arrow-circle-o-left: unquote('"\\f190"');
+$desafio-caret-square-o-left: unquote('"\\f191"');
+$desafio-toggle-left: unquote('"\\f191"');
+$desafio-dot-circle-o: unquote('"\\f192"');
+$desafio-wheelchair: unquote('"\\f193"');
+$desafio-vimeo-square: unquote('"\\f194"');
+$desafio-try: unquote('"\\f195"');
+$desafio-turkish-lira: unquote('"\\f195"');
+$desafio-plus-square-o: unquote('"\\f196"');
+$desafio-space-shuttle: unquote('"\\f197"');
+$desafio-slack: unquote('"\\f198"');
+$desafio-envelope-square: unquote('"\\f199"');
+$desafio-wordpress: unquote('"\\f19a"');
+$desafio-openid: unquote('"\\f19b"');
+$desafio-bank: unquote('"\\f19c"');
+$desafio-institution: unquote('"\\f19c"');
+$desafio-university: unquote('"\\f19c"');
+$desafio-graduation-cap: unquote('"\\f19d"');
+$desafio-mortar-board: unquote('"\\f19d"');
+$desafio-yahoo: unquote('"\\f19e"');
+$desafio-google: unquote('"\\f1a0"');
+$desafio-reddit: unquote('"\\f1a1"');
+$desafio-reddit-square: unquote('"\\f1a2"');
+$desafio-stumbleupon-circle: unquote('"\\f1a3"');
+$desafio-stumbleupon: unquote('"\\f1a4"');
+$desafio-delicious: unquote('"\\f1a5"');
+$desafio-digg: unquote('"\\f1a6"');
+$desafio-pied-piper-pp: unquote('"\\f1a7"');
+$desafio-pied-piper-alt: unquote('"\\f1a8"');
+$desafio-drupal: unquote('"\\f1a9"');
+$desafio-joomla: unquote('"\\f1aa"');
+$desafio-language: unquote('"\\f1ab"');
+$desafio-fax: unquote('"\\f1ac"');
+$desafio-building: unquote('"\\f1ad"');
+$desafio-child: unquote('"\\f1ae"');
+$desafio-paw: unquote('"\\f1b0"');
+$desafio-spoon: unquote('"\\f1b1"');
+$desafio-cube: unquote('"\\f1b2"');
+$desafio-cubes: unquote('"\\f1b3"');
+$desafio-behance: unquote('"\\f1b4"');
+$desafio-behance-square: unquote('"\\f1b5"');
+$desafio-steam: unquote('"\\f1b6"');
+$desafio-steam-square: unquote('"\\f1b7"');
+$desafio-recycle: unquote('"\\f1b8"');
+$desafio-automobile: unquote('"\\f1b9"');
+$desafio-car: unquote('"\\f1b9"');
+$desafio-cab: unquote('"\\f1ba"');
+$desafio-taxi: unquote('"\\f1ba"');
+$desafio-tree: unquote('"\\f1bb"');
+$desafio-spotify: unquote('"\\f1bc"');
+$desafio-deviantart: unquote('"\\f1bd"');
+$desafio-soundcloud: unquote('"\\f1be"');
+$desafio-database: unquote('"\\f1c0"');
+$desafio-file-pdf-o: unquote('"\\f1c1"');
+$desafio-file-word-o: unquote('"\\f1c2"');
+$desafio-file-excel-o: unquote('"\\f1c3"');
+$desafio-file-powerpoint-o: unquote('"\\f1c4"');
+$desafio-file-image-o: unquote('"\\f1c5"');
+$desafio-file-photo-o: unquote('"\\f1c5"');
+$desafio-file-picture-o: unquote('"\\f1c5"');
+$desafio-file-archive-o: unquote('"\\f1c6"');
+$desafio-file-zip-o: unquote('"\\f1c6"');
+$desafio-file-audio-o: unquote('"\\f1c7"');
+$desafio-file-sound-o: unquote('"\\f1c7"');
+$desafio-file-movie-o: unquote('"\\f1c8"');
+$desafio-file-video-o: unquote('"\\f1c8"');
+$desafio-file-code-o: unquote('"\\f1c9"');
+$desafio-vine: unquote('"\\f1ca"');
+$desafio-codepen: unquote('"\\f1cb"');
+$desafio-jsfiddle: unquote('"\\f1cc"');
+$desafio-life-bouy: unquote('"\\f1cd"');
+$desafio-life-buoy: unquote('"\\f1cd"');
+$desafio-life-ring: unquote('"\\f1cd"');
+$desafio-life-saver: unquote('"\\f1cd"');
+$desafio-support: unquote('"\\f1cd"');
+$desafio-circle-o-notch: unquote('"\\f1ce"');
+$desafio-ra: unquote('"\\f1d0"');
+$desafio-rebel: unquote('"\\f1d0"');
+$desafio-resistance: unquote('"\\f1d0"');
+$desafio-empire: unquote('"\\f1d1"');
+$desafio-ge: unquote('"\\f1d1"');
+$desafio-git-square: unquote('"\\f1d2"');
+$desafio-git: unquote('"\\f1d3"');
+$desafio-hacker-news: unquote('"\\f1d4"');
+$desafio-y-combinator-square: unquote('"\\f1d4"');
+$desafio-yc-square: unquote('"\\f1d4"');
+$desafio-tencent-weibo: unquote('"\\f1d5"');
+$desafio-qq: unquote('"\\f1d6"');
+$desafio-wechat: unquote('"\\f1d7"');
+$desafio-weixin: unquote('"\\f1d7"');
+$desafio-paper-plane: unquote('"\\f1d8"');
+$desafio-send: unquote('"\\f1d8"');
+$desafio-paper-plane-o: unquote('"\\f1d9"');
+$desafio-send-o: unquote('"\\f1d9"');
+$desafio-history: unquote('"\\f1da"');
+$desafio-circle-thin: unquote('"\\f1db"');
+$desafio-header: unquote('"\\f1dc"');
+$desafio-paragraph: unquote('"\\f1dd"');
+$desafio-sliders: unquote('"\\f1de"');
+$desafio-share-alt: unquote('"\\f1e0"');
+$desafio-share-alt-square: unquote('"\\f1e1"');
+$desafio-bomb: unquote('"\\f1e2"');
+$desafio-futbol-o: unquote('"\\f1e3"');
+$desafio-soccer-ball-o: unquote('"\\f1e3"');
+$desafio-tty: unquote('"\\f1e4"');
+$desafio-binoculars: unquote('"\\f1e5"');
+$desafio-plug: unquote('"\\f1e6"');
+$desafio-slideshare: unquote('"\\f1e7"');
+$desafio-twitch: unquote('"\\f1e8"');
+$desafio-yelp: unquote('"\\f1e9"');
+$desafio-newspaper-o: unquote('"\\f1ea"');
+$desafio-wifi: unquote('"\\f1eb"');
+$desafio-calculator: unquote('"\\f1ec"');
+$desafio-paypal: unquote('"\\f1ed"');
+$desafio-google-wallet: unquote('"\\f1ee"');
+$desafio-cc-visa: unquote('"\\f1f0"');
+$desafio-cc-mastercard: unquote('"\\f1f1"');
+$desafio-cc-discover: unquote('"\\f1f2"');
+$desafio-cc-amex: unquote('"\\f1f3"');
+$desafio-cc-paypal: unquote('"\\f1f4"');
+$desafio-cc-stripe: unquote('"\\f1f5"');
+$desafio-bell-slash: unquote('"\\f1f6"');
+$desafio-bell-slash-o: unquote('"\\f1f7"');
+$desafio-trash: unquote('"\\f1f8"');
+$desafio-copyright: unquote('"\\f1f9"');
+$desafio-at: unquote('"\\f1fa"');
+$desafio-eyedropper: unquote('"\\f1fb"');
+$desafio-paint-brush: unquote('"\\f1fc"');
+$desafio-birthday-cake: unquote('"\\f1fd"');
+$desafio-area-chart: unquote('"\\f1fe"');
+$desafio-pie-chart: unquote('"\\f200"');
+$desafio-line-chart: unquote('"\\f201"');
+$desafio-lastfm: unquote('"\\f202"');
+$desafio-lastfm-square: unquote('"\\f203"');
+$desafio-toggle-off: unquote('"\\f204"');
+$desafio-toggle-on: unquote('"\\f205"');
+$desafio-bicycle: unquote('"\\f206"');
+$desafio-bus: unquote('"\\f207"');
+$desafio-ioxhost: unquote('"\\f208"');
+$desafio-angellist: unquote('"\\f209"');
+$desafio-cc: unquote('"\\f20a"');
+$desafio-ils: unquote('"\\f20b"');
+$desafio-shekel: unquote('"\\f20b"');
+$desafio-sheqel: unquote('"\\f20b"');
+$desafio-meanpath: unquote('"\\f20c"');
+$desafio-buysellads: unquote('"\\f20d"');
+$desafio-connectdevelop: unquote('"\\f20e"');
+$desafio-dashcube: unquote('"\\f210"');
+$desafio-forumbee: unquote('"\\f211"');
+$desafio-leanpub: unquote('"\\f212"');
+$desafio-sellsy: unquote('"\\f213"');
+$desafio-shirtsinbulk: unquote('"\\f214"');
+$desafio-simplybuilt: unquote('"\\f215"');
+$desafio-skyatlas: unquote('"\\f216"');
+$desafio-cart-plus: unquote('"\\f217"');
+$desafio-cart-arrow-down: unquote('"\\f218"');
+$desafio-diamond: unquote('"\\f219"');
+$desafio-ship: unquote('"\\f21a"');
+$desafio-user-secret: unquote('"\\f21b"');
+$desafio-motorcycle: unquote('"\\f21c"');
+$desafio-street-view: unquote('"\\f21d"');
+$desafio-heartbeat: unquote('"\\f21e"');
+$desafio-venus: unquote('"\\f221"');
+$desafio-mars: unquote('"\\f222"');
+$desafio-mercury: unquote('"\\f223"');
+$desafio-intersex: unquote('"\\f224"');
+$desafio-transgender: unquote('"\\f224"');
+$desafio-transgender-alt: unquote('"\\f225"');
+$desafio-venus-double: unquote('"\\f226"');
+$desafio-mars-double: unquote('"\\f227"');
+$desafio-venus-mars: unquote('"\\f228"');
+$desafio-mars-stroke: unquote('"\\f229"');
+$desafio-mars-stroke-v: unquote('"\\f22a"');
+$desafio-mars-stroke-h: unquote('"\\f22b"');
+$desafio-neuter: unquote('"\\f22c"');
+$desafio-genderless: unquote('"\\f22d"');
+$desafio-facebook-official: unquote('"\\f230"');
+$desafio-pinterest-p: unquote('"\\f231"');
+$desafio-whatsapp: unquote('"\\f232"');
+$desafio-server: unquote('"\\f233"');
+$desafio-user-plus: unquote('"\\f234"');
+$desafio-user-times: unquote('"\\f235"');
+$desafio-bed: unquote('"\\f236"');
+$desafio-hotel: unquote('"\\f236"');
+$desafio-viacoin: unquote('"\\f237"');
+$desafio-train: unquote('"\\f238"');
+$desafio-subway: unquote('"\\f239"');
+$desafio-medium: unquote('"\\f23a"');
+$desafio-y-combinator: unquote('"\\f23b"');
+$desafio-yc: unquote('"\\f23b"');
+$desafio-optin-monster: unquote('"\\f23c"');
+$desafio-opencart: unquote('"\\f23d"');
+$desafio-expeditedssl: unquote('"\\f23e"');
+$desafio-battery: unquote('"\\f240"');
+$desafio-battery-4: unquote('"\\f240"');
+$desafio-battery-full: unquote('"\\f240"');
+$desafio-battery-3: unquote('"\\f241"');
+$desafio-battery-three-quarters: unquote('"\\f241"');
+$desafio-battery-2: unquote('"\\f242"');
+$desafio-battery-half: unquote('"\\f242"');
+$desafio-battery-1: unquote('"\\f243"');
+$desafio-battery-quarter: unquote('"\\f243"');
+$desafio-battery-0: unquote('"\\f244"');
+$desafio-battery-empty: unquote('"\\f244"');
+$desafio-mouse-pointer: unquote('"\\f245"');
+$desafio-i-cursor: unquote('"\\f246"');
+$desafio-object-group: unquote('"\\f247"');
+$desafio-object-ungroup: unquote('"\\f248"');
+$desafio-sticky-note: unquote('"\\f249"');
+$desafio-sticky-note-o: unquote('"\\f24a"');
+$desafio-cc-jcb: unquote('"\\f24b"');
+$desafio-cc-diners-club: unquote('"\\f24c"');
+$desafio-clone: unquote('"\\f24d"');
+$desafio-balance-scale: unquote('"\\f24e"');
+$desafio-hourglass-o: unquote('"\\f250"');
+$desafio-hourglass-1: unquote('"\\f251"');
+$desafio-hourglass-start: unquote('"\\f251"');
+$desafio-hourglass-2: unquote('"\\f252"');
+$desafio-hourglass-half: unquote('"\\f252"');
+$desafio-hourglass-3: unquote('"\\f253"');
+$desafio-hourglass-end: unquote('"\\f253"');
+$desafio-hourglass: unquote('"\\f254"');
+$desafio-hand-grab-o: unquote('"\\f255"');
+$desafio-hand-rock-o: unquote('"\\f255"');
+$desafio-hand-paper-o: unquote('"\\f256"');
+$desafio-hand-stop-o: unquote('"\\f256"');
+$desafio-hand-scissors-o: unquote('"\\f257"');
+$desafio-hand-lizard-o: unquote('"\\f258"');
+$desafio-hand-spock-o: unquote('"\\f259"');
+$desafio-hand-pointer-o: unquote('"\\f25a"');
+$desafio-hand-peace-o: unquote('"\\f25b"');
+$desafio-trademark: unquote('"\\f25c"');
+$desafio-registered: unquote('"\\f25d"');
+$desafio-creative-commons: unquote('"\\f25e"');
+$desafio-gg: unquote('"\\f260"');
+$desafio-gg-circle: unquote('"\\f261"');
+$desafio-tripadvisor: unquote('"\\f262"');
+$desafio-odnoklassniki: unquote('"\\f263"');
+$desafio-odnoklassniki-square: unquote('"\\f264"');
+$desafio-get-pocket: unquote('"\\f265"');
+$desafio-wikipedia-w: unquote('"\\f266"');
+$desafio-safari: unquote('"\\f267"');
+$desafio-chrome: unquote('"\\f268"');
+$desafio-firefox: unquote('"\\f269"');
+$desafio-opera: unquote('"\\f26a"');
+$desafio-internet-explorer: unquote('"\\f26b"');
+$desafio-television: unquote('"\\f26c"');
+$desafio-tv: unquote('"\\f26c"');
+$desafio-contao: unquote('"\\f26d"');
+$desafio-500px: unquote('"\\f26e"');
+$desafio-amazon: unquote('"\\f270"');
+$desafio-calendar-plus-o: unquote('"\\f271"');
+$desafio-calendar-minus-o: unquote('"\\f272"');
+$desafio-calendar-times-o: unquote('"\\f273"');
+$desafio-calendar-check-o: unquote('"\\f274"');
+$desafio-industry: unquote('"\\f275"');
+$desafio-map-pin: unquote('"\\f276"');
+$desafio-map-signs: unquote('"\\f277"');
+$desafio-map-o: unquote('"\\f278"');
+$desafio-map: unquote('"\\f279"');
+$desafio-commenting: unquote('"\\f27a"');
+$desafio-commenting-o: unquote('"\\f27b"');
+$desafio-houzz: unquote('"\\f27c"');
+$desafio-vimeo: unquote('"\\f27d"');
+$desafio-black-tie: unquote('"\\f27e"');
+$desafio-fonticons: unquote('"\\f280"');
+$desafio-reddit-alien: unquote('"\\f281"');
+$desafio-edge: unquote('"\\f282"');
+$desafio-credit-card-alt: unquote('"\\f283"');
+$desafio-codiepie: unquote('"\\f284"');
+$desafio-modx: unquote('"\\f285"');
+$desafio-fort-awesome: unquote('"\\f286"');
+$desafio-usb: unquote('"\\f287"');
+$desafio-product-hunt: unquote('"\\f288"');
+$desafio-mixcloud: unquote('"\\f289"');
+$desafio-scribd: unquote('"\\f28a"');
+$desafio-pause-circle: unquote('"\\f28b"');
+$desafio-pause-circle-o: unquote('"\\f28c"');
+$desafio-stop-circle: unquote('"\\f28d"');
+$desafio-stop-circle-o: unquote('"\\f28e"');
+$desafio-shopping-bag: unquote('"\\f290"');
+$desafio-shopping-basket: unquote('"\\f291"');
+$desafio-hashtag: unquote('"\\f292"');
+$desafio-bluetooth: unquote('"\\f293"');
+$desafio-bluetooth-b: unquote('"\\f294"');
+$desafio-percent: unquote('"\\f295"');
+$desafio-gitlab: unquote('"\\f296"');
+$desafio-wpbeginner: unquote('"\\f297"');
+$desafio-wpforms: unquote('"\\f298"');
+$desafio-envira: unquote('"\\f299"');
+$desafio-universal-access: unquote('"\\f29a"');
+$desafio-wheelchair-alt: unquote('"\\f29b"');
+$desafio-question-circle-o: unquote('"\\f29c"');
+$desafio-blind: unquote('"\\f29d"');
+$desafio-audio-description: unquote('"\\f29e"');
+$desafio-volume-control-phone: unquote('"\\f2a0"');
+$desafio-braille: unquote('"\\f2a1"');
+$desafio-assistive-listening-systems: unquote('"\\f2a2"');
+$desafio-american-sign-language-interpreting: unquote('"\\f2a3"');
+$desafio-asl-interpreting: unquote('"\\f2a3"');
+$desafio-deaf: unquote('"\\f2a4"');
+$desafio-deafness: unquote('"\\f2a4"');
+$desafio-hard-of-hearing: unquote('"\\f2a4"');
+$desafio-glide: unquote('"\\f2a5"');
+$desafio-glide-g: unquote('"\\f2a6"');
+$desafio-sign-language: unquote('"\\f2a7"');
+$desafio-signing: unquote('"\\f2a7"');
+$desafio-low-vision: unquote('"\\f2a8"');
+$desafio-viadeo: unquote('"\\f2a9"');
+$desafio-viadeo-square: unquote('"\\f2aa"');
+$desafio-snapchat: unquote('"\\f2ab"');
+$desafio-snapchat-ghost: unquote('"\\f2ac"');
+$desafio-snapchat-square: unquote('"\\f2ad"');
+$desafio-pied-piper: unquote('"\\f2ae"');
+$desafio-first-order: unquote('"\\f2b0"');
+$desafio-yoast: unquote('"\\f2b1"');
+$desafio-themeisle: unquote('"\\f2b2"');
+$desafio-google-plus-circle: unquote('"\\f2b3"');
+$desafio-google-plus-official: unquote('"\\f2b3"');
+$desafio-fa: unquote('"\\f2b4"');
+$desafio-font-awesome: unquote('"\\f2b4"');
+$desafio-handshake-o: unquote('"\\f2b5"');
+$desafio-envelope-open: unquote('"\\f2b6"');
+$desafio-envelope-open-o: unquote('"\\f2b7"');
+$desafio-linode: unquote('"\\f2b8"');
+$desafio-address-book: unquote('"\\f2b9"');
+$desafio-address-book-o: unquote('"\\f2ba"');
+$desafio-address-card: unquote('"\\f2bb"');
+$desafio-vcard: unquote('"\\f2bb"');
+$desafio-address-card-o: unquote('"\\f2bc"');
+$desafio-vcard-o: unquote('"\\f2bc"');
+$desafio-user-circle: unquote('"\\f2bd"');
+$desafio-user-circle-o: unquote('"\\f2be"');
+$desafio-user-o: unquote('"\\f2c0"');
+$desafio-id-badge: unquote('"\\f2c1"');
+$desafio-drivers-license: unquote('"\\f2c2"');
+$desafio-id-card: unquote('"\\f2c2"');
+$desafio-drivers-license-o: unquote('"\\f2c3"');
+$desafio-id-card-o: unquote('"\\f2c3"');
+$desafio-quora: unquote('"\\f2c4"');
+$desafio-free-code-camp: unquote('"\\f2c5"');
+$desafio-telegram: unquote('"\\f2c6"');
+$desafio-thermometer: unquote('"\\f2c7"');
+$desafio-thermometer-4: unquote('"\\f2c7"');
+$desafio-thermometer-full: unquote('"\\f2c7"');
+$desafio-thermometer-3: unquote('"\\f2c8"');
+$desafio-thermometer-three-quarters: unquote('"\\f2c8"');
+$desafio-thermometer-2: unquote('"\\f2c9"');
+$desafio-thermometer-half: unquote('"\\f2c9"');
+$desafio-thermometer-1: unquote('"\\f2ca"');
+$desafio-thermometer-quarter: unquote('"\\f2ca"');
+$desafio-thermometer-0: unquote('"\\f2cb"');
+$desafio-thermometer-empty: unquote('"\\f2cb"');
+$desafio-shower: unquote('"\\f2cc"');
+$desafio-bath: unquote('"\\f2cd"');
+$desafio-bathtub: unquote('"\\f2cd"');
+$desafio-s15: unquote('"\\f2cd"');
+$desafio-podcast: unquote('"\\f2ce"');
+$desafio-window-maximize: unquote('"\\f2d0"');
+$desafio-window-minimize: unquote('"\\f2d1"');
+$desafio-window-restore: unquote('"\\f2d2"');
+$desafio-times-rectangle: unquote('"\\f2d3"');
+$desafio-window-close: unquote('"\\f2d3"');
+$desafio-times-rectangle-o: unquote('"\\f2d4"');
+$desafio-window-close-o: unquote('"\\f2d4"');
+$desafio-bandcamp: unquote('"\\f2d5"');
+$desafio-grav: unquote('"\\f2d6"');
+$desafio-etsy: unquote('"\\f2d7"');
+$desafio-imdb: unquote('"\\f2d8"');
+$desafio-ravelry: unquote('"\\f2d9"');
+$desafio-eercast: unquote('"\\f2da"');
+$desafio-microchip: unquote('"\\f2db"');
+$desafio-snowflake-o: unquote('"\\f2dc"');
+$desafio-superpowers: unquote('"\\f2dd"');
+$desafio-wpexplorer: unquote('"\\f2de"');
+$desafio-meetup: unquote('"\\f2e0"');
+
+@font-face {
+    font-family: '#{$icomoon-font-family}';
+    src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?yjep73');
+    src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?yjep73#iefix') format('embedded-opentype'),
+      url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?yjep73') format('truetype'),
+      url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?yjep73') format('woff'),
+      url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?yjep73##{$icomoon-font-family}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  .desafio {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: '#{$icomoon-font-family}' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .desafio-asterisk {
+    &:before {
+      content: $desafio-asterisk; 
+    }
+  }
+  .desafio-plus {
+    &:before {
+      content: $desafio-plus; 
+    }
+  }
+  .desafio-question {
+    &:before {
+      content: $desafio-question; 
+    }
+  }
+  .desafio-minus {
+    &:before {
+      content: $desafio-minus; 
+    }
+  }
+  .desafio-glass {
+    &:before {
+      content: $desafio-glass; 
+    }
+  }
+  .desafio-music {
+    &:before {
+      content: $desafio-music; 
+    }
+  }
+  .desafio-search {
+    &:before {
+      content: $desafio-search; 
+    }
+  }
+  .desafio-envelope-o {
+    &:before {
+      content: $desafio-envelope-o; 
+    }
+  }
+  .desafio-heart {
+    &:before {
+      content: $desafio-heart; 
+    }
+  }
+  .desafio-star {
+    &:before {
+      content: $desafio-star; 
+    }
+  }
+  .desafio-star-o {
+    &:before {
+      content: $desafio-star-o; 
+    }
+  }
+  .desafio-user {
+    &:before {
+      content: $desafio-user; 
+    }
+  }
+  .desafio-film {
+    &:before {
+      content: $desafio-film; 
+    }
+  }
+  .desafio-th-large {
+    &:before {
+      content: $desafio-th-large; 
+    }
+  }
+  .desafio-th {
+    &:before {
+      content: $desafio-th; 
+    }
+  }
+  .desafio-th-list {
+    &:before {
+      content: $desafio-th-list; 
+    }
+  }
+  .desafio-check {
+    &:before {
+      content: $desafio-check; 
+    }
+  }
+  .desafio-close {
+    &:before {
+      content: $desafio-close; 
+    }
+  }
+  .desafio-remove {
+    &:before {
+      content: $desafio-remove; 
+    }
+  }
+  .desafio-times {
+    &:before {
+      content: $desafio-times; 
+    }
+  }
+  .desafio-search-plus {
+    &:before {
+      content: $desafio-search-plus; 
+    }
+  }
+  .desafio-search-minus {
+    &:before {
+      content: $desafio-search-minus; 
+    }
+  }
+  .desafio-power-off {
+    &:before {
+      content: $desafio-power-off; 
+    }
+  }
+  .desafio-signal {
+    &:before {
+      content: $desafio-signal; 
+    }
+  }
+  .desafio-cog {
+    &:before {
+      content: $desafio-cog; 
+    }
+  }
+  .desafio-gear {
+    &:before {
+      content: $desafio-gear; 
+    }
+  }
+  .desafio-trash-o {
+    &:before {
+      content: $desafio-trash-o; 
+    }
+  }
+  .desafio-home {
+    &:before {
+      content: $desafio-home; 
+    }
+  }
+  .desafio-file-o {
+    &:before {
+      content: $desafio-file-o; 
+    }
+  }
+  .desafio-clock-o {
+    &:before {
+      content: $desafio-clock-o; 
+    }
+  }
+  .desafio-road {
+    &:before {
+      content: $desafio-road; 
+    }
+  }
+  .desafio-download {
+    &:before {
+      content: $desafio-download; 
+    }
+  }
+  .desafio-arrow-circle-o-down {
+    &:before {
+      content: $desafio-arrow-circle-o-down; 
+    }
+  }
+  .desafio-arrow-circle-o-up {
+    &:before {
+      content: $desafio-arrow-circle-o-up; 
+    }
+  }
+  .desafio-inbox {
+    &:before {
+      content: $desafio-inbox; 
+    }
+  }
+  .desafio-play-circle-o {
+    &:before {
+      content: $desafio-play-circle-o; 
+    }
+  }
+  .desafio-repeat {
+    &:before {
+      content: $desafio-repeat; 
+    }
+  }
+  .desafio-rotate-right {
+    &:before {
+      content: $desafio-rotate-right; 
+    }
+  }
+  .desafio-refresh {
+    &:before {
+      content: $desafio-refresh; 
+    }
+  }
+  .desafio-list-alt {
+    &:before {
+      content: $desafio-list-alt; 
+    }
+  }
+  .desafio-lock {
+    &:before {
+      content: $desafio-lock; 
+    }
+  }
+  .desafio-flag {
+    &:before {
+      content: $desafio-flag; 
+    }
+  }
+  .desafio-headphones {
+    &:before {
+      content: $desafio-headphones; 
+    }
+  }
+  .desafio-volume-off {
+    &:before {
+      content: $desafio-volume-off; 
+    }
+  }
+  .desafio-volume-down {
+    &:before {
+      content: $desafio-volume-down; 
+    }
+  }
+  .desafio-volume-up {
+    &:before {
+      content: $desafio-volume-up; 
+    }
+  }
+  .desafio-qrcode {
+    &:before {
+      content: $desafio-qrcode; 
+    }
+  }
+  .desafio-barcode {
+    &:before {
+      content: $desafio-barcode; 
+    }
+  }
+  .desafio-tag {
+    &:before {
+      content: $desafio-tag; 
+    }
+  }
+  .desafio-tags {
+    &:before {
+      content: $desafio-tags; 
+    }
+  }
+  .desafio-book {
+    &:before {
+      content: $desafio-book; 
+    }
+  }
+  .desafio-bookmark {
+    &:before {
+      content: $desafio-bookmark; 
+    }
+  }
+  .desafio-print {
+    &:before {
+      content: $desafio-print; 
+    }
+  }
+  .desafio-camera {
+    &:before {
+      content: $desafio-camera; 
+    }
+  }
+  .desafio-font {
+    &:before {
+      content: $desafio-font; 
+    }
+  }
+  .desafio-bold {
+    &:before {
+      content: $desafio-bold; 
+    }
+  }
+  .desafio-italic {
+    &:before {
+      content: $desafio-italic; 
+    }
+  }
+  .desafio-text-height {
+    &:before {
+      content: $desafio-text-height; 
+    }
+  }
+  .desafio-text-width {
+    &:before {
+      content: $desafio-text-width; 
+    }
+  }
+  .desafio-align-left {
+    &:before {
+      content: $desafio-align-left; 
+    }
+  }
+  .desafio-align-center {
+    &:before {
+      content: $desafio-align-center; 
+    }
+  }
+  .desafio-align-right {
+    &:before {
+      content: $desafio-align-right; 
+    }
+  }
+  .desafio-align-justify {
+    &:before {
+      content: $desafio-align-justify; 
+    }
+  }
+  .desafio-list {
+    &:before {
+      content: $desafio-list; 
+    }
+  }
+  .desafio-dedent {
+    &:before {
+      content: $desafio-dedent; 
+    }
+  }
+  .desafio-outdent {
+    &:before {
+      content: $desafio-outdent; 
+    }
+  }
+  .desafio-indent {
+    &:before {
+      content: $desafio-indent; 
+    }
+  }
+  .desafio-video-camera {
+    &:before {
+      content: $desafio-video-camera; 
+    }
+  }
+  .desafio-image {
+    &:before {
+      content: $desafio-image; 
+    }
+  }
+  .desafio-photo {
+    &:before {
+      content: $desafio-photo; 
+    }
+  }
+  .desafio-picture-o {
+    &:before {
+      content: $desafio-picture-o; 
+    }
+  }
+  .desafio-pencil {
+    &:before {
+      content: $desafio-pencil; 
+    }
+  }
+  .desafio-map-marker {
+    &:before {
+      content: $desafio-map-marker; 
+    }
+  }
+  .desafio-adjust {
+    &:before {
+      content: $desafio-adjust; 
+    }
+  }
+  .desafio-tint {
+    &:before {
+      content: $desafio-tint; 
+    }
+  }
+  .desafio-edit {
+    &:before {
+      content: $desafio-edit; 
+    }
+  }
+  .desafio-pencil-square-o {
+    &:before {
+      content: $desafio-pencil-square-o; 
+    }
+  }
+  .desafio-share-square-o {
+    &:before {
+      content: $desafio-share-square-o; 
+    }
+  }
+  .desafio-check-square-o {
+    &:before {
+      content: $desafio-check-square-o; 
+    }
+  }
+  .desafio-arrows {
+    &:before {
+      content: $desafio-arrows; 
+    }
+  }
+  .desafio-step-backward {
+    &:before {
+      content: $desafio-step-backward; 
+    }
+  }
+  .desafio-fast-backward {
+    &:before {
+      content: $desafio-fast-backward; 
+    }
+  }
+  .desafio-backward {
+    &:before {
+      content: $desafio-backward; 
+    }
+  }
+  .desafio-play {
+    &:before {
+      content: $desafio-play; 
+    }
+  }
+  .desafio-pause {
+    &:before {
+      content: $desafio-pause; 
+    }
+  }
+  .desafio-stop {
+    &:before {
+      content: $desafio-stop; 
+    }
+  }
+  .desafio-forward {
+    &:before {
+      content: $desafio-forward; 
+    }
+  }
+  .desafio-fast-forward {
+    &:before {
+      content: $desafio-fast-forward; 
+    }
+  }
+  .desafio-step-forward {
+    &:before {
+      content: $desafio-step-forward; 
+    }
+  }
+  .desafio-eject {
+    &:before {
+      content: $desafio-eject; 
+    }
+  }
+  .desafio-chevron-left {
+    &:before {
+      content: $desafio-chevron-left; 
+    }
+  }
+  .desafio-chevron-right {
+    &:before {
+      content: $desafio-chevron-right; 
+    }
+  }
+  .desafio-plus-circle {
+    &:before {
+      content: $desafio-plus-circle; 
+    }
+  }
+  .desafio-minus-circle {
+    &:before {
+      content: $desafio-minus-circle; 
+    }
+  }
+  .desafio-times-circle {
+    &:before {
+      content: $desafio-times-circle; 
+    }
+  }
+  .desafio-check-circle {
+    &:before {
+      content: $desafio-check-circle; 
+    }
+  }
+  .desafio-question-circle {
+    &:before {
+      content: $desafio-question-circle; 
+    }
+  }
+  .desafio-info-circle {
+    &:before {
+      content: $desafio-info-circle; 
+    }
+  }
+  .desafio-crosshairs {
+    &:before {
+      content: $desafio-crosshairs; 
+    }
+  }
+  .desafio-times-circle-o {
+    &:before {
+      content: $desafio-times-circle-o; 
+    }
+  }
+  .desafio-check-circle-o {
+    &:before {
+      content: $desafio-check-circle-o; 
+    }
+  }
+  .desafio-ban {
+    &:before {
+      content: $desafio-ban; 
+    }
+  }
+  .desafio-arrow-left {
+    &:before {
+      content: $desafio-arrow-left; 
+    }
+  }
+  .desafio-arrow-right {
+    &:before {
+      content: $desafio-arrow-right; 
+    }
+  }
+  .desafio-arrow-up {
+    &:before {
+      content: $desafio-arrow-up; 
+    }
+  }
+  .desafio-arrow-down {
+    &:before {
+      content: $desafio-arrow-down; 
+    }
+  }
+  .desafio-mail-forward {
+    &:before {
+      content: $desafio-mail-forward; 
+    }
+  }
+  .desafio-share {
+    &:before {
+      content: $desafio-share; 
+    }
+  }
+  .desafio-expand {
+    &:before {
+      content: $desafio-expand; 
+    }
+  }
+  .desafio-compress {
+    &:before {
+      content: $desafio-compress; 
+    }
+  }
+  .desafio-exclamation-circle {
+    &:before {
+      content: $desafio-exclamation-circle; 
+    }
+  }
+  .desafio-gift {
+    &:before {
+      content: $desafio-gift; 
+    }
+  }
+  .desafio-leaf {
+    &:before {
+      content: $desafio-leaf; 
+    }
+  }
+  .desafio-fire {
+    &:before {
+      content: $desafio-fire; 
+    }
+  }
+  .desafio-eye {
+    &:before {
+      content: $desafio-eye; 
+    }
+  }
+  .desafio-eye-slash {
+    &:before {
+      content: $desafio-eye-slash; 
+    }
+  }
+  .desafio-exclamation-triangle {
+    &:before {
+      content: $desafio-exclamation-triangle; 
+    }
+  }
+  .desafio-warning {
+    &:before {
+      content: $desafio-warning; 
+    }
+  }
+  .desafio-plane {
+    &:before {
+      content: $desafio-plane; 
+    }
+  }
+  .desafio-calendar {
+    &:before {
+      content: $desafio-calendar; 
+    }
+  }
+  .desafio-random {
+    &:before {
+      content: $desafio-random; 
+    }
+  }
+  .desafio-comment {
+    &:before {
+      content: $desafio-comment; 
+    }
+  }
+  .desafio-magnet {
+    &:before {
+      content: $desafio-magnet; 
+    }
+  }
+  .desafio-chevron-up {
+    &:before {
+      content: $desafio-chevron-up; 
+    }
+  }
+  .desafio-chevron-down {
+    &:before {
+      content: $desafio-chevron-down; 
+    }
+  }
+  .desafio-retweet {
+    &:before {
+      content: $desafio-retweet; 
+    }
+  }
+  .desafio-shopping-cart {
+    &:before {
+      content: $desafio-shopping-cart; 
+    }
+  }
+  .desafio-folder {
+    &:before {
+      content: $desafio-folder; 
+    }
+  }
+  .desafio-folder-open {
+    &:before {
+      content: $desafio-folder-open; 
+    }
+  }
+  .desafio-arrows-v {
+    &:before {
+      content: $desafio-arrows-v; 
+    }
+  }
+  .desafio-arrows-h {
+    &:before {
+      content: $desafio-arrows-h; 
+    }
+  }
+  .desafio-bar-chart {
+    &:before {
+      content: $desafio-bar-chart; 
+    }
+  }
+  .desafio-bar-chart-o {
+    &:before {
+      content: $desafio-bar-chart-o; 
+    }
+  }
+  .desafio-twitter-square {
+    &:before {
+      content: $desafio-twitter-square; 
+    }
+  }
+  .desafio-facebook-square {
+    &:before {
+      content: $desafio-facebook-square; 
+    }
+  }
+  .desafio-camera-retro {
+    &:before {
+      content: $desafio-camera-retro; 
+    }
+  }
+  .desafio-key {
+    &:before {
+      content: $desafio-key; 
+    }
+  }
+  .desafio-cogs {
+    &:before {
+      content: $desafio-cogs; 
+    }
+  }
+  .desafio-gears {
+    &:before {
+      content: $desafio-gears; 
+    }
+  }
+  .desafio-comments {
+    &:before {
+      content: $desafio-comments; 
+    }
+  }
+  .desafio-thumbs-o-up {
+    &:before {
+      content: $desafio-thumbs-o-up; 
+    }
+  }
+  .desafio-thumbs-o-down {
+    &:before {
+      content: $desafio-thumbs-o-down; 
+    }
+  }
+  .desafio-star-half {
+    &:before {
+      content: $desafio-star-half; 
+    }
+  }
+  .desafio-heart-o {
+    &:before {
+      content: $desafio-heart-o; 
+    }
+  }
+  .desafio-sign-out {
+    &:before {
+      content: $desafio-sign-out; 
+    }
+  }
+  .desafio-linkedin-square {
+    &:before {
+      content: $desafio-linkedin-square; 
+    }
+  }
+  .desafio-thumb-tack {
+    &:before {
+      content: $desafio-thumb-tack; 
+    }
+  }
+  .desafio-external-link {
+    &:before {
+      content: $desafio-external-link; 
+    }
+  }
+  .desafio-sign-in {
+    &:before {
+      content: $desafio-sign-in; 
+    }
+  }
+  .desafio-trophy {
+    &:before {
+      content: $desafio-trophy; 
+    }
+  }
+  .desafio-github-square {
+    &:before {
+      content: $desafio-github-square; 
+    }
+  }
+  .desafio-upload {
+    &:before {
+      content: $desafio-upload; 
+    }
+  }
+  .desafio-lemon-o {
+    &:before {
+      content: $desafio-lemon-o; 
+    }
+  }
+  .desafio-phone {
+    &:before {
+      content: $desafio-phone; 
+    }
+  }
+  .desafio-square-o {
+    &:before {
+      content: $desafio-square-o; 
+    }
+  }
+  .desafio-bookmark-o {
+    &:before {
+      content: $desafio-bookmark-o; 
+    }
+  }
+  .desafio-phone-square {
+    &:before {
+      content: $desafio-phone-square; 
+    }
+  }
+  .desafio-twitter {
+    &:before {
+      content: $desafio-twitter; 
+    }
+  }
+  .desafio-facebook {
+    &:before {
+      content: $desafio-facebook; 
+    }
+  }
+  .desafio-facebook-f {
+    &:before {
+      content: $desafio-facebook-f; 
+    }
+  }
+  .desafio-github {
+    &:before {
+      content: $desafio-github; 
+    }
+  }
+  .desafio-unlock {
+    &:before {
+      content: $desafio-unlock; 
+    }
+  }
+  .desafio-credit-card {
+    &:before {
+      content: $desafio-credit-card; 
+    }
+  }
+  .desafio-feed {
+    &:before {
+      content: $desafio-feed; 
+    }
+  }
+  .desafio-rss {
+    &:before {
+      content: $desafio-rss; 
+    }
+  }
+  .desafio-hdd-o {
+    &:before {
+      content: $desafio-hdd-o; 
+    }
+  }
+  .desafio-bullhorn {
+    &:before {
+      content: $desafio-bullhorn; 
+    }
+  }
+  .desafio-bell-o {
+    &:before {
+      content: $desafio-bell-o; 
+    }
+  }
+  .desafio-certificate {
+    &:before {
+      content: $desafio-certificate; 
+    }
+  }
+  .desafio-hand-o-right {
+    &:before {
+      content: $desafio-hand-o-right; 
+    }
+  }
+  .desafio-hand-o-left {
+    &:before {
+      content: $desafio-hand-o-left; 
+    }
+  }
+  .desafio-hand-o-up {
+    &:before {
+      content: $desafio-hand-o-up; 
+    }
+  }
+  .desafio-hand-o-down {
+    &:before {
+      content: $desafio-hand-o-down; 
+    }
+  }
+  .desafio-arrow-circle-left {
+    &:before {
+      content: $desafio-arrow-circle-left; 
+    }
+  }
+  .desafio-arrow-circle-right {
+    &:before {
+      content: $desafio-arrow-circle-right; 
+    }
+  }
+  .desafio-arrow-circle-up {
+    &:before {
+      content: $desafio-arrow-circle-up; 
+    }
+  }
+  .desafio-arrow-circle-down {
+    &:before {
+      content: $desafio-arrow-circle-down; 
+    }
+  }
+  .desafio-globe {
+    &:before {
+      content: $desafio-globe; 
+    }
+  }
+  .desafio-wrench {
+    &:before {
+      content: $desafio-wrench; 
+    }
+  }
+  .desafio-tasks {
+    &:before {
+      content: $desafio-tasks; 
+    }
+  }
+  .desafio-filter {
+    &:before {
+      content: $desafio-filter; 
+    }
+  }
+  .desafio-briefcase {
+    &:before {
+      content: $desafio-briefcase; 
+    }
+  }
+  .desafio-arrows-alt {
+    &:before {
+      content: $desafio-arrows-alt; 
+    }
+  }
+  .desafio-group {
+    &:before {
+      content: $desafio-group; 
+    }
+  }
+  .desafio-users {
+    &:before {
+      content: $desafio-users; 
+    }
+  }
+  .desafio-chain {
+    &:before {
+      content: $desafio-chain; 
+    }
+  }
+  .desafio-link {
+    &:before {
+      content: $desafio-link; 
+    }
+  }
+  .desafio-cloud {
+    &:before {
+      content: $desafio-cloud; 
+    }
+  }
+  .desafio-flask {
+    &:before {
+      content: $desafio-flask; 
+    }
+  }
+  .desafio-cut {
+    &:before {
+      content: $desafio-cut; 
+    }
+  }
+  .desafio-scissors {
+    &:before {
+      content: $desafio-scissors; 
+    }
+  }
+  .desafio-copy {
+    &:before {
+      content: $desafio-copy; 
+    }
+  }
+  .desafio-files-o {
+    &:before {
+      content: $desafio-files-o; 
+    }
+  }
+  .desafio-paperclip {
+    &:before {
+      content: $desafio-paperclip; 
+    }
+  }
+  .desafio-floppy-o {
+    &:before {
+      content: $desafio-floppy-o; 
+    }
+  }
+  .desafio-save {
+    &:before {
+      content: $desafio-save; 
+    }
+  }
+  .desafio-square {
+    &:before {
+      content: $desafio-square; 
+    }
+  }
+  .desafio-bars {
+    &:before {
+      content: $desafio-bars; 
+    }
+  }
+  .desafio-navicon {
+    &:before {
+      content: $desafio-navicon; 
+    }
+  }
+  .desafio-reorder {
+    &:before {
+      content: $desafio-reorder; 
+    }
+  }
+  .desafio-list-ul {
+    &:before {
+      content: $desafio-list-ul; 
+    }
+  }
+  .desafio-list-ol {
+    &:before {
+      content: $desafio-list-ol; 
+    }
+  }
+  .desafio-strikethrough {
+    &:before {
+      content: $desafio-strikethrough; 
+    }
+  }
+  .desafio-underline {
+    &:before {
+      content: $desafio-underline; 
+    }
+  }
+  .desafio-table {
+    &:before {
+      content: $desafio-table; 
+    }
+  }
+  .desafio-magic {
+    &:before {
+      content: $desafio-magic; 
+    }
+  }
+  .desafio-truck {
+    &:before {
+      content: $desafio-truck; 
+    }
+  }
+  .desafio-pinterest {
+    &:before {
+      content: $desafio-pinterest; 
+    }
+  }
+  .desafio-pinterest-square {
+    &:before {
+      content: $desafio-pinterest-square; 
+    }
+  }
+  .desafio-google-plus-square {
+    &:before {
+      content: $desafio-google-plus-square; 
+    }
+  }
+  .desafio-google-plus {
+    &:before {
+      content: $desafio-google-plus; 
+    }
+  }
+  .desafio-money {
+    &:before {
+      content: $desafio-money; 
+    }
+  }
+  .desafio-caret-down {
+    &:before {
+      content: $desafio-caret-down; 
+    }
+  }
+  .desafio-caret-up {
+    &:before {
+      content: $desafio-caret-up; 
+    }
+  }
+  .desafio-caret-left {
+    &:before {
+      content: $desafio-caret-left; 
+    }
+  }
+  .desafio-caret-right {
+    &:before {
+      content: $desafio-caret-right; 
+    }
+  }
+  .desafio-columns {
+    &:before {
+      content: $desafio-columns; 
+    }
+  }
+  .desafio-sort {
+    &:before {
+      content: $desafio-sort; 
+    }
+  }
+  .desafio-unsorted {
+    &:before {
+      content: $desafio-unsorted; 
+    }
+  }
+  .desafio-sort-desc {
+    &:before {
+      content: $desafio-sort-desc; 
+    }
+  }
+  .desafio-sort-down {
+    &:before {
+      content: $desafio-sort-down; 
+    }
+  }
+  .desafio-sort-asc {
+    &:before {
+      content: $desafio-sort-asc; 
+    }
+  }
+  .desafio-sort-up {
+    &:before {
+      content: $desafio-sort-up; 
+    }
+  }
+  .desafio-envelope {
+    &:before {
+      content: $desafio-envelope; 
+    }
+  }
+  .desafio-linkedin {
+    &:before {
+      content: $desafio-linkedin; 
+    }
+  }
+  .desafio-rotate-left {
+    &:before {
+      content: $desafio-rotate-left; 
+    }
+  }
+  .desafio-undo {
+    &:before {
+      content: $desafio-undo; 
+    }
+  }
+  .desafio-gavel {
+    &:before {
+      content: $desafio-gavel; 
+    }
+  }
+  .desafio-legal {
+    &:before {
+      content: $desafio-legal; 
+    }
+  }
+  .desafio-dashboard {
+    &:before {
+      content: $desafio-dashboard; 
+    }
+  }
+  .desafio-tachometer {
+    &:before {
+      content: $desafio-tachometer; 
+    }
+  }
+  .desafio-comment-o {
+    &:before {
+      content: $desafio-comment-o; 
+    }
+  }
+  .desafio-comments-o {
+    &:before {
+      content: $desafio-comments-o; 
+    }
+  }
+  .desafio-bolt {
+    &:before {
+      content: $desafio-bolt; 
+    }
+  }
+  .desafio-flash {
+    &:before {
+      content: $desafio-flash; 
+    }
+  }
+  .desafio-sitemap {
+    &:before {
+      content: $desafio-sitemap; 
+    }
+  }
+  .desafio-umbrella {
+    &:before {
+      content: $desafio-umbrella; 
+    }
+  }
+  .desafio-clipboard {
+    &:before {
+      content: $desafio-clipboard; 
+    }
+  }
+  .desafio-paste {
+    &:before {
+      content: $desafio-paste; 
+    }
+  }
+  .desafio-lightbulb-o {
+    &:before {
+      content: $desafio-lightbulb-o; 
+    }
+  }
+  .desafio-exchange {
+    &:before {
+      content: $desafio-exchange; 
+    }
+  }
+  .desafio-cloud-download {
+    &:before {
+      content: $desafio-cloud-download; 
+    }
+  }
+  .desafio-cloud-upload {
+    &:before {
+      content: $desafio-cloud-upload; 
+    }
+  }
+  .desafio-user-md {
+    &:before {
+      content: $desafio-user-md; 
+    }
+  }
+  .desafio-stethoscope {
+    &:before {
+      content: $desafio-stethoscope; 
+    }
+  }
+  .desafio-suitcase {
+    &:before {
+      content: $desafio-suitcase; 
+    }
+  }
+  .desafio-bell {
+    &:before {
+      content: $desafio-bell; 
+    }
+  }
+  .desafio-coffee {
+    &:before {
+      content: $desafio-coffee; 
+    }
+  }
+  .desafio-cutlery {
+    &:before {
+      content: $desafio-cutlery; 
+    }
+  }
+  .desafio-file-text-o {
+    &:before {
+      content: $desafio-file-text-o; 
+    }
+  }
+  .desafio-building-o {
+    &:before {
+      content: $desafio-building-o; 
+    }
+  }
+  .desafio-hospital-o {
+    &:before {
+      content: $desafio-hospital-o; 
+    }
+  }
+  .desafio-ambulance {
+    &:before {
+      content: $desafio-ambulance; 
+    }
+  }
+  .desafio-medkit {
+    &:before {
+      content: $desafio-medkit; 
+    }
+  }
+  .desafio-fighter-jet {
+    &:before {
+      content: $desafio-fighter-jet; 
+    }
+  }
+  .desafio-beer {
+    &:before {
+      content: $desafio-beer; 
+    }
+  }
+  .desafio-h-square {
+    &:before {
+      content: $desafio-h-square; 
+    }
+  }
+  .desafio-plus-square {
+    &:before {
+      content: $desafio-plus-square; 
+    }
+  }
+  .desafio-angle-double-left {
+    &:before {
+      content: $desafio-angle-double-left; 
+    }
+  }
+  .desafio-angle-double-right {
+    &:before {
+      content: $desafio-angle-double-right; 
+    }
+  }
+  .desafio-angle-double-up {
+    &:before {
+      content: $desafio-angle-double-up; 
+    }
+  }
+  .desafio-angle-double-down {
+    &:before {
+      content: $desafio-angle-double-down; 
+    }
+  }
+  .desafio-angle-left {
+    &:before {
+      content: $desafio-angle-left; 
+    }
+  }
+  .desafio-angle-right {
+    &:before {
+      content: $desafio-angle-right; 
+    }
+  }
+  .desafio-angle-up {
+    &:before {
+      content: $desafio-angle-up; 
+    }
+  }
+  .desafio-angle-down {
+    &:before {
+      content: $desafio-angle-down; 
+    }
+  }
+  .desafio-desktop {
+    &:before {
+      content: $desafio-desktop; 
+    }
+  }
+  .desafio-laptop {
+    &:before {
+      content: $desafio-laptop; 
+    }
+  }
+  .desafio-tablet {
+    &:before {
+      content: $desafio-tablet; 
+    }
+  }
+  .desafio-mobile {
+    &:before {
+      content: $desafio-mobile; 
+    }
+  }
+  .desafio-mobile-phone {
+    &:before {
+      content: $desafio-mobile-phone; 
+    }
+  }
+  .desafio-circle-o {
+    &:before {
+      content: $desafio-circle-o; 
+    }
+  }
+  .desafio-quote-left {
+    &:before {
+      content: $desafio-quote-left; 
+    }
+  }
+  .desafio-quote-right {
+    &:before {
+      content: $desafio-quote-right; 
+    }
+  }
+  .desafio-spinner {
+    &:before {
+      content: $desafio-spinner; 
+    }
+  }
+  .desafio-circle {
+    &:before {
+      content: $desafio-circle; 
+    }
+  }
+  .desafio-mail-reply {
+    &:before {
+      content: $desafio-mail-reply; 
+    }
+  }
+  .desafio-reply {
+    &:before {
+      content: $desafio-reply; 
+    }
+  }
+  .desafio-github-alt {
+    &:before {
+      content: $desafio-github-alt; 
+    }
+  }
+  .desafio-folder-o {
+    &:before {
+      content: $desafio-folder-o; 
+    }
+  }
+  .desafio-folder-open-o {
+    &:before {
+      content: $desafio-folder-open-o; 
+    }
+  }
+  .desafio-smile-o {
+    &:before {
+      content: $desafio-smile-o; 
+    }
+  }
+  .desafio-frown-o {
+    &:before {
+      content: $desafio-frown-o; 
+    }
+  }
+  .desafio-meh-o {
+    &:before {
+      content: $desafio-meh-o; 
+    }
+  }
+  .desafio-gamepad {
+    &:before {
+      content: $desafio-gamepad; 
+    }
+  }
+  .desafio-keyboard-o {
+    &:before {
+      content: $desafio-keyboard-o; 
+    }
+  }
+  .desafio-flag-o {
+    &:before {
+      content: $desafio-flag-o; 
+    }
+  }
+  .desafio-flag-checkered {
+    &:before {
+      content: $desafio-flag-checkered; 
+    }
+  }
+  .desafio-terminal {
+    &:before {
+      content: $desafio-terminal; 
+    }
+  }
+  .desafio-code {
+    &:before {
+      content: $desafio-code; 
+    }
+  }
+  .desafio-mail-reply-all {
+    &:before {
+      content: $desafio-mail-reply-all; 
+    }
+  }
+  .desafio-reply-all {
+    &:before {
+      content: $desafio-reply-all; 
+    }
+  }
+  .desafio-star-half-empty {
+    &:before {
+      content: $desafio-star-half-empty; 
+    }
+  }
+  .desafio-star-half-full {
+    &:before {
+      content: $desafio-star-half-full; 
+    }
+  }
+  .desafio-star-half-o {
+    &:before {
+      content: $desafio-star-half-o; 
+    }
+  }
+  .desafio-location-arrow {
+    &:before {
+      content: $desafio-location-arrow; 
+    }
+  }
+  .desafio-crop {
+    &:before {
+      content: $desafio-crop; 
+    }
+  }
+  .desafio-code-fork {
+    &:before {
+      content: $desafio-code-fork; 
+    }
+  }
+  .desafio-chain-broken {
+    &:before {
+      content: $desafio-chain-broken; 
+    }
+  }
+  .desafio-unlink {
+    &:before {
+      content: $desafio-unlink; 
+    }
+  }
+  .desafio-info {
+    &:before {
+      content: $desafio-info; 
+    }
+  }
+  .desafio-exclamation {
+    &:before {
+      content: $desafio-exclamation; 
+    }
+  }
+  .desafio-superscript {
+    &:before {
+      content: $desafio-superscript; 
+    }
+  }
+  .desafio-subscript {
+    &:before {
+      content: $desafio-subscript; 
+    }
+  }
+  .desafio-eraser {
+    &:before {
+      content: $desafio-eraser; 
+    }
+  }
+  .desafio-puzzle-piece {
+    &:before {
+      content: $desafio-puzzle-piece; 
+    }
+  }
+  .desafio-microphone {
+    &:before {
+      content: $desafio-microphone; 
+    }
+  }
+  .desafio-microphone-slash {
+    &:before {
+      content: $desafio-microphone-slash; 
+    }
+  }
+  .desafio-shield {
+    &:before {
+      content: $desafio-shield; 
+    }
+  }
+  .desafio-calendar-o {
+    &:before {
+      content: $desafio-calendar-o; 
+    }
+  }
+  .desafio-fire-extinguisher {
+    &:before {
+      content: $desafio-fire-extinguisher; 
+    }
+  }
+  .desafio-rocket {
+    &:before {
+      content: $desafio-rocket; 
+    }
+  }
+  .desafio-maxcdn {
+    &:before {
+      content: $desafio-maxcdn; 
+    }
+  }
+  .desafio-chevron-circle-left {
+    &:before {
+      content: $desafio-chevron-circle-left; 
+    }
+  }
+  .desafio-chevron-circle-right {
+    &:before {
+      content: $desafio-chevron-circle-right; 
+    }
+  }
+  .desafio-chevron-circle-up {
+    &:before {
+      content: $desafio-chevron-circle-up; 
+    }
+  }
+  .desafio-chevron-circle-down {
+    &:before {
+      content: $desafio-chevron-circle-down; 
+    }
+  }
+  .desafio-html5 {
+    &:before {
+      content: $desafio-html5; 
+    }
+  }
+  .desafio-css3 {
+    &:before {
+      content: $desafio-css3; 
+    }
+  }
+  .desafio-anchor {
+    &:before {
+      content: $desafio-anchor; 
+    }
+  }
+  .desafio-unlock-alt {
+    &:before {
+      content: $desafio-unlock-alt; 
+    }
+  }
+  .desafio-bullseye {
+    &:before {
+      content: $desafio-bullseye; 
+    }
+  }
+  .desafio-ellipsis-h {
+    &:before {
+      content: $desafio-ellipsis-h; 
+    }
+  }
+  .desafio-ellipsis-v {
+    &:before {
+      content: $desafio-ellipsis-v; 
+    }
+  }
+  .desafio-rss-square {
+    &:before {
+      content: $desafio-rss-square; 
+    }
+  }
+  .desafio-play-circle {
+    &:before {
+      content: $desafio-play-circle; 
+    }
+  }
+  .desafio-ticket {
+    &:before {
+      content: $desafio-ticket; 
+    }
+  }
+  .desafio-minus-square {
+    &:before {
+      content: $desafio-minus-square; 
+    }
+  }
+  .desafio-minus-square-o {
+    &:before {
+      content: $desafio-minus-square-o; 
+    }
+  }
+  .desafio-level-up {
+    &:before {
+      content: $desafio-level-up; 
+    }
+  }
+  .desafio-level-down {
+    &:before {
+      content: $desafio-level-down; 
+    }
+  }
+  .desafio-check-square {
+    &:before {
+      content: $desafio-check-square; 
+    }
+  }
+  .desafio-pencil-square {
+    &:before {
+      content: $desafio-pencil-square; 
+    }
+  }
+  .desafio-external-link-square {
+    &:before {
+      content: $desafio-external-link-square; 
+    }
+  }
+  .desafio-share-square {
+    &:before {
+      content: $desafio-share-square; 
+    }
+  }
+  .desafio-compass {
+    &:before {
+      content: $desafio-compass; 
+    }
+  }
+  .desafio-caret-square-o-down {
+    &:before {
+      content: $desafio-caret-square-o-down; 
+    }
+  }
+  .desafio-toggle-down {
+    &:before {
+      content: $desafio-toggle-down; 
+    }
+  }
+  .desafio-caret-square-o-up {
+    &:before {
+      content: $desafio-caret-square-o-up; 
+    }
+  }
+  .desafio-toggle-up {
+    &:before {
+      content: $desafio-toggle-up; 
+    }
+  }
+  .desafio-caret-square-o-right {
+    &:before {
+      content: $desafio-caret-square-o-right; 
+    }
+  }
+  .desafio-toggle-right {
+    &:before {
+      content: $desafio-toggle-right; 
+    }
+  }
+  .desafio-eur {
+    &:before {
+      content: $desafio-eur; 
+    }
+  }
+  .desafio-euro {
+    &:before {
+      content: $desafio-euro; 
+    }
+  }
+  .desafio-gbp {
+    &:before {
+      content: $desafio-gbp; 
+    }
+  }
+  .desafio-dollar {
+    &:before {
+      content: $desafio-dollar; 
+    }
+  }
+  .desafio-usd {
+    &:before {
+      content: $desafio-usd; 
+    }
+  }
+  .desafio-inr {
+    &:before {
+      content: $desafio-inr; 
+    }
+  }
+  .desafio-rupee {
+    &:before {
+      content: $desafio-rupee; 
+    }
+  }
+  .desafio-cny {
+    &:before {
+      content: $desafio-cny; 
+    }
+  }
+  .desafio-jpy {
+    &:before {
+      content: $desafio-jpy; 
+    }
+  }
+  .desafio-rmb {
+    &:before {
+      content: $desafio-rmb; 
+    }
+  }
+  .desafio-yen {
+    &:before {
+      content: $desafio-yen; 
+    }
+  }
+  .desafio-rouble {
+    &:before {
+      content: $desafio-rouble; 
+    }
+  }
+  .desafio-rub {
+    &:before {
+      content: $desafio-rub; 
+    }
+  }
+  .desafio-ruble {
+    &:before {
+      content: $desafio-ruble; 
+    }
+  }
+  .desafio-krw {
+    &:before {
+      content: $desafio-krw; 
+    }
+  }
+  .desafio-won {
+    &:before {
+      content: $desafio-won; 
+    }
+  }
+  .desafio-bitcoin {
+    &:before {
+      content: $desafio-bitcoin; 
+    }
+  }
+  .desafio-btc {
+    &:before {
+      content: $desafio-btc; 
+    }
+  }
+  .desafio-file {
+    &:before {
+      content: $desafio-file; 
+    }
+  }
+  .desafio-file-text {
+    &:before {
+      content: $desafio-file-text; 
+    }
+  }
+  .desafio-sort-alpha-asc {
+    &:before {
+      content: $desafio-sort-alpha-asc; 
+    }
+  }
+  .desafio-sort-alpha-desc {
+    &:before {
+      content: $desafio-sort-alpha-desc; 
+    }
+  }
+  .desafio-sort-amount-asc {
+    &:before {
+      content: $desafio-sort-amount-asc; 
+    }
+  }
+  .desafio-sort-amount-desc {
+    &:before {
+      content: $desafio-sort-amount-desc; 
+    }
+  }
+  .desafio-sort-numeric-asc {
+    &:before {
+      content: $desafio-sort-numeric-asc; 
+    }
+  }
+  .desafio-sort-numeric-desc {
+    &:before {
+      content: $desafio-sort-numeric-desc; 
+    }
+  }
+  .desafio-thumbs-up {
+    &:before {
+      content: $desafio-thumbs-up; 
+    }
+  }
+  .desafio-thumbs-down {
+    &:before {
+      content: $desafio-thumbs-down; 
+    }
+  }
+  .desafio-youtube-square {
+    &:before {
+      content: $desafio-youtube-square; 
+    }
+  }
+  .desafio-youtube {
+    &:before {
+      content: $desafio-youtube; 
+    }
+  }
+  .desafio-xing {
+    &:before {
+      content: $desafio-xing; 
+    }
+  }
+  .desafio-xing-square {
+    &:before {
+      content: $desafio-xing-square; 
+    }
+  }
+  .desafio-youtube-play {
+    &:before {
+      content: $desafio-youtube-play; 
+    }
+  }
+  .desafio-dropbox {
+    &:before {
+      content: $desafio-dropbox; 
+    }
+  }
+  .desafio-stack-overflow {
+    &:before {
+      content: $desafio-stack-overflow; 
+    }
+  }
+  .desafio-instagram {
+    &:before {
+      content: $desafio-instagram; 
+    }
+  }
+  .desafio-flickr {
+    &:before {
+      content: $desafio-flickr; 
+    }
+  }
+  .desafio-adn {
+    &:before {
+      content: $desafio-adn; 
+    }
+  }
+  .desafio-bitbucket {
+    &:before {
+      content: $desafio-bitbucket; 
+    }
+  }
+  .desafio-bitbucket-square {
+    &:before {
+      content: $desafio-bitbucket-square; 
+    }
+  }
+  .desafio-tumblr {
+    &:before {
+      content: $desafio-tumblr; 
+    }
+  }
+  .desafio-tumblr-square {
+    &:before {
+      content: $desafio-tumblr-square; 
+    }
+  }
+  .desafio-long-arrow-down {
+    &:before {
+      content: $desafio-long-arrow-down; 
+    }
+  }
+  .desafio-long-arrow-up {
+    &:before {
+      content: $desafio-long-arrow-up; 
+    }
+  }
+  .desafio-long-arrow-left {
+    &:before {
+      content: $desafio-long-arrow-left; 
+    }
+  }
+  .desafio-long-arrow-right {
+    &:before {
+      content: $desafio-long-arrow-right; 
+    }
+  }
+  .desafio-apple {
+    &:before {
+      content: $desafio-apple; 
+    }
+  }
+  .desafio-windows {
+    &:before {
+      content: $desafio-windows; 
+    }
+  }
+  .desafio-android {
+    &:before {
+      content: $desafio-android; 
+    }
+  }
+  .desafio-linux {
+    &:before {
+      content: $desafio-linux; 
+    }
+  }
+  .desafio-dribbble {
+    &:before {
+      content: $desafio-dribbble; 
+    }
+  }
+  .desafio-skype {
+    &:before {
+      content: $desafio-skype; 
+    }
+  }
+  .desafio-foursquare {
+    &:before {
+      content: $desafio-foursquare; 
+    }
+  }
+  .desafio-trello {
+    &:before {
+      content: $desafio-trello; 
+    }
+  }
+  .desafio-female {
+    &:before {
+      content: $desafio-female; 
+    }
+  }
+  .desafio-male {
+    &:before {
+      content: $desafio-male; 
+    }
+  }
+  .desafio-gittip {
+    &:before {
+      content: $desafio-gittip; 
+    }
+  }
+  .desafio-gratipay {
+    &:before {
+      content: $desafio-gratipay; 
+    }
+  }
+  .desafio-sun-o {
+    &:before {
+      content: $desafio-sun-o; 
+    }
+  }
+  .desafio-moon-o {
+    &:before {
+      content: $desafio-moon-o; 
+    }
+  }
+  .desafio-archive {
+    &:before {
+      content: $desafio-archive; 
+    }
+  }
+  .desafio-bug {
+    &:before {
+      content: $desafio-bug; 
+    }
+  }
+  .desafio-vk {
+    &:before {
+      content: $desafio-vk; 
+    }
+  }
+  .desafio-weibo {
+    &:before {
+      content: $desafio-weibo; 
+    }
+  }
+  .desafio-renren {
+    &:before {
+      content: $desafio-renren; 
+    }
+  }
+  .desafio-pagelines {
+    &:before {
+      content: $desafio-pagelines; 
+    }
+  }
+  .desafio-stack-exchange {
+    &:before {
+      content: $desafio-stack-exchange; 
+    }
+  }
+  .desafio-arrow-circle-o-right {
+    &:before {
+      content: $desafio-arrow-circle-o-right; 
+    }
+  }
+  .desafio-arrow-circle-o-left {
+    &:before {
+      content: $desafio-arrow-circle-o-left; 
+    }
+  }
+  .desafio-caret-square-o-left {
+    &:before {
+      content: $desafio-caret-square-o-left; 
+    }
+  }
+  .desafio-toggle-left {
+    &:before {
+      content: $desafio-toggle-left; 
+    }
+  }
+  .desafio-dot-circle-o {
+    &:before {
+      content: $desafio-dot-circle-o; 
+    }
+  }
+  .desafio-wheelchair {
+    &:before {
+      content: $desafio-wheelchair; 
+    }
+  }
+  .desafio-vimeo-square {
+    &:before {
+      content: $desafio-vimeo-square; 
+    }
+  }
+  .desafio-try {
+    &:before {
+      content: $desafio-try; 
+    }
+  }
+  .desafio-turkish-lira {
+    &:before {
+      content: $desafio-turkish-lira; 
+    }
+  }
+  .desafio-plus-square-o {
+    &:before {
+      content: $desafio-plus-square-o; 
+    }
+  }
+  .desafio-space-shuttle {
+    &:before {
+      content: $desafio-space-shuttle; 
+    }
+  }
+  .desafio-slack {
+    &:before {
+      content: $desafio-slack; 
+    }
+  }
+  .desafio-envelope-square {
+    &:before {
+      content: $desafio-envelope-square; 
+    }
+  }
+  .desafio-wordpress {
+    &:before {
+      content: $desafio-wordpress; 
+    }
+  }
+  .desafio-openid {
+    &:before {
+      content: $desafio-openid; 
+    }
+  }
+  .desafio-bank {
+    &:before {
+      content: $desafio-bank; 
+    }
+  }
+  .desafio-institution {
+    &:before {
+      content: $desafio-institution; 
+    }
+  }
+  .desafio-university {
+    &:before {
+      content: $desafio-university; 
+    }
+  }
+  .desafio-graduation-cap {
+    &:before {
+      content: $desafio-graduation-cap; 
+    }
+  }
+  .desafio-mortar-board {
+    &:before {
+      content: $desafio-mortar-board; 
+    }
+  }
+  .desafio-yahoo {
+    &:before {
+      content: $desafio-yahoo; 
+    }
+  }
+  .desafio-google {
+    &:before {
+      content: $desafio-google; 
+    }
+  }
+  .desafio-reddit {
+    &:before {
+      content: $desafio-reddit; 
+    }
+  }
+  .desafio-reddit-square {
+    &:before {
+      content: $desafio-reddit-square; 
+    }
+  }
+  .desafio-stumbleupon-circle {
+    &:before {
+      content: $desafio-stumbleupon-circle; 
+    }
+  }
+  .desafio-stumbleupon {
+    &:before {
+      content: $desafio-stumbleupon; 
+    }
+  }
+  .desafio-delicious {
+    &:before {
+      content: $desafio-delicious; 
+    }
+  }
+  .desafio-digg {
+    &:before {
+      content: $desafio-digg; 
+    }
+  }
+  .desafio-pied-piper-pp {
+    &:before {
+      content: $desafio-pied-piper-pp; 
+    }
+  }
+  .desafio-pied-piper-alt {
+    &:before {
+      content: $desafio-pied-piper-alt; 
+    }
+  }
+  .desafio-drupal {
+    &:before {
+      content: $desafio-drupal; 
+    }
+  }
+  .desafio-joomla {
+    &:before {
+      content: $desafio-joomla; 
+    }
+  }
+  .desafio-language {
+    &:before {
+      content: $desafio-language; 
+    }
+  }
+  .desafio-fax {
+    &:before {
+      content: $desafio-fax; 
+    }
+  }
+  .desafio-building {
+    &:before {
+      content: $desafio-building; 
+    }
+  }
+  .desafio-child {
+    &:before {
+      content: $desafio-child; 
+    }
+  }
+  .desafio-paw {
+    &:before {
+      content: $desafio-paw; 
+    }
+  }
+  .desafio-spoon {
+    &:before {
+      content: $desafio-spoon; 
+    }
+  }
+  .desafio-cube {
+    &:before {
+      content: $desafio-cube; 
+    }
+  }
+  .desafio-cubes {
+    &:before {
+      content: $desafio-cubes; 
+    }
+  }
+  .desafio-behance {
+    &:before {
+      content: $desafio-behance; 
+    }
+  }
+  .desafio-behance-square {
+    &:before {
+      content: $desafio-behance-square; 
+    }
+  }
+  .desafio-steam {
+    &:before {
+      content: $desafio-steam; 
+    }
+  }
+  .desafio-steam-square {
+    &:before {
+      content: $desafio-steam-square; 
+    }
+  }
+  .desafio-recycle {
+    &:before {
+      content: $desafio-recycle; 
+    }
+  }
+  .desafio-automobile {
+    &:before {
+      content: $desafio-automobile; 
+    }
+  }
+  .desafio-car {
+    &:before {
+      content: $desafio-car; 
+    }
+  }
+  .desafio-cab {
+    &:before {
+      content: $desafio-cab; 
+    }
+  }
+  .desafio-taxi {
+    &:before {
+      content: $desafio-taxi; 
+    }
+  }
+  .desafio-tree {
+    &:before {
+      content: $desafio-tree; 
+    }
+  }
+  .desafio-spotify {
+    &:before {
+      content: $desafio-spotify; 
+    }
+  }
+  .desafio-deviantart {
+    &:before {
+      content: $desafio-deviantart; 
+    }
+  }
+  .desafio-soundcloud {
+    &:before {
+      content: $desafio-soundcloud; 
+    }
+  }
+  .desafio-database {
+    &:before {
+      content: $desafio-database; 
+    }
+  }
+  .desafio-file-pdf-o {
+    &:before {
+      content: $desafio-file-pdf-o; 
+    }
+  }
+  .desafio-file-word-o {
+    &:before {
+      content: $desafio-file-word-o; 
+    }
+  }
+  .desafio-file-excel-o {
+    &:before {
+      content: $desafio-file-excel-o; 
+    }
+  }
+  .desafio-file-powerpoint-o {
+    &:before {
+      content: $desafio-file-powerpoint-o; 
+    }
+  }
+  .desafio-file-image-o {
+    &:before {
+      content: $desafio-file-image-o; 
+    }
+  }
+  .desafio-file-photo-o {
+    &:before {
+      content: $desafio-file-photo-o; 
+    }
+  }
+  .desafio-file-picture-o {
+    &:before {
+      content: $desafio-file-picture-o; 
+    }
+  }
+  .desafio-file-archive-o {
+    &:before {
+      content: $desafio-file-archive-o; 
+    }
+  }
+  .desafio-file-zip-o {
+    &:before {
+      content: $desafio-file-zip-o; 
+    }
+  }
+  .desafio-file-audio-o {
+    &:before {
+      content: $desafio-file-audio-o; 
+    }
+  }
+  .desafio-file-sound-o {
+    &:before {
+      content: $desafio-file-sound-o; 
+    }
+  }
+  .desafio-file-movie-o {
+    &:before {
+      content: $desafio-file-movie-o; 
+    }
+  }
+  .desafio-file-video-o {
+    &:before {
+      content: $desafio-file-video-o; 
+    }
+  }
+  .desafio-file-code-o {
+    &:before {
+      content: $desafio-file-code-o; 
+    }
+  }
+  .desafio-vine {
+    &:before {
+      content: $desafio-vine; 
+    }
+  }
+  .desafio-codepen {
+    &:before {
+      content: $desafio-codepen; 
+    }
+  }
+  .desafio-jsfiddle {
+    &:before {
+      content: $desafio-jsfiddle; 
+    }
+  }
+  .desafio-life-bouy {
+    &:before {
+      content: $desafio-life-bouy; 
+    }
+  }
+  .desafio-life-buoy {
+    &:before {
+      content: $desafio-life-buoy; 
+    }
+  }
+  .desafio-life-ring {
+    &:before {
+      content: $desafio-life-ring; 
+    }
+  }
+  .desafio-life-saver {
+    &:before {
+      content: $desafio-life-saver; 
+    }
+  }
+  .desafio-support {
+    &:before {
+      content: $desafio-support; 
+    }
+  }
+  .desafio-circle-o-notch {
+    &:before {
+      content: $desafio-circle-o-notch; 
+    }
+  }
+  .desafio-ra {
+    &:before {
+      content: $desafio-ra; 
+    }
+  }
+  .desafio-rebel {
+    &:before {
+      content: $desafio-rebel; 
+    }
+  }
+  .desafio-resistance {
+    &:before {
+      content: $desafio-resistance; 
+    }
+  }
+  .desafio-empire {
+    &:before {
+      content: $desafio-empire; 
+    }
+  }
+  .desafio-ge {
+    &:before {
+      content: $desafio-ge; 
+    }
+  }
+  .desafio-git-square {
+    &:before {
+      content: $desafio-git-square; 
+    }
+  }
+  .desafio-git {
+    &:before {
+      content: $desafio-git; 
+    }
+  }
+  .desafio-hacker-news {
+    &:before {
+      content: $desafio-hacker-news; 
+    }
+  }
+  .desafio-y-combinator-square {
+    &:before {
+      content: $desafio-y-combinator-square; 
+    }
+  }
+  .desafio-yc-square {
+    &:before {
+      content: $desafio-yc-square; 
+    }
+  }
+  .desafio-tencent-weibo {
+    &:before {
+      content: $desafio-tencent-weibo; 
+    }
+  }
+  .desafio-qq {
+    &:before {
+      content: $desafio-qq; 
+    }
+  }
+  .desafio-wechat {
+    &:before {
+      content: $desafio-wechat; 
+    }
+  }
+  .desafio-weixin {
+    &:before {
+      content: $desafio-weixin; 
+    }
+  }
+  .desafio-paper-plane {
+    &:before {
+      content: $desafio-paper-plane; 
+    }
+  }
+  .desafio-send {
+    &:before {
+      content: $desafio-send; 
+    }
+  }
+  .desafio-paper-plane-o {
+    &:before {
+      content: $desafio-paper-plane-o; 
+    }
+  }
+  .desafio-send-o {
+    &:before {
+      content: $desafio-send-o; 
+    }
+  }
+  .desafio-history {
+    &:before {
+      content: $desafio-history; 
+    }
+  }
+  .desafio-circle-thin {
+    &:before {
+      content: $desafio-circle-thin; 
+    }
+  }
+  .desafio-header {
+    &:before {
+      content: $desafio-header; 
+    }
+  }
+  .desafio-paragraph {
+    &:before {
+      content: $desafio-paragraph; 
+    }
+  }
+  .desafio-sliders {
+    &:before {
+      content: $desafio-sliders; 
+    }
+  }
+  .desafio-share-alt {
+    &:before {
+      content: $desafio-share-alt; 
+    }
+  }
+  .desafio-share-alt-square {
+    &:before {
+      content: $desafio-share-alt-square; 
+    }
+  }
+  .desafio-bomb {
+    &:before {
+      content: $desafio-bomb; 
+    }
+  }
+  .desafio-futbol-o {
+    &:before {
+      content: $desafio-futbol-o; 
+    }
+  }
+  .desafio-soccer-ball-o {
+    &:before {
+      content: $desafio-soccer-ball-o; 
+    }
+  }
+  .desafio-tty {
+    &:before {
+      content: $desafio-tty; 
+    }
+  }
+  .desafio-binoculars {
+    &:before {
+      content: $desafio-binoculars; 
+    }
+  }
+  .desafio-plug {
+    &:before {
+      content: $desafio-plug; 
+    }
+  }
+  .desafio-slideshare {
+    &:before {
+      content: $desafio-slideshare; 
+    }
+  }
+  .desafio-twitch {
+    &:before {
+      content: $desafio-twitch; 
+    }
+  }
+  .desafio-yelp {
+    &:before {
+      content: $desafio-yelp; 
+    }
+  }
+  .desafio-newspaper-o {
+    &:before {
+      content: $desafio-newspaper-o; 
+    }
+  }
+  .desafio-wifi {
+    &:before {
+      content: $desafio-wifi; 
+    }
+  }
+  .desafio-calculator {
+    &:before {
+      content: $desafio-calculator; 
+    }
+  }
+  .desafio-paypal {
+    &:before {
+      content: $desafio-paypal; 
+    }
+  }
+  .desafio-google-wallet {
+    &:before {
+      content: $desafio-google-wallet; 
+    }
+  }
+  .desafio-cc-visa {
+    &:before {
+      content: $desafio-cc-visa; 
+    }
+  }
+  .desafio-cc-mastercard {
+    &:before {
+      content: $desafio-cc-mastercard; 
+    }
+  }
+  .desafio-cc-discover {
+    &:before {
+      content: $desafio-cc-discover; 
+    }
+  }
+  .desafio-cc-amex {
+    &:before {
+      content: $desafio-cc-amex; 
+    }
+  }
+  .desafio-cc-paypal {
+    &:before {
+      content: $desafio-cc-paypal; 
+    }
+  }
+  .desafio-cc-stripe {
+    &:before {
+      content: $desafio-cc-stripe; 
+    }
+  }
+  .desafio-bell-slash {
+    &:before {
+      content: $desafio-bell-slash; 
+    }
+  }
+  .desafio-bell-slash-o {
+    &:before {
+      content: $desafio-bell-slash-o; 
+    }
+  }
+  .desafio-trash {
+    &:before {
+      content: $desafio-trash; 
+    }
+  }
+  .desafio-copyright {
+    &:before {
+      content: $desafio-copyright; 
+    }
+  }
+  .desafio-at {
+    &:before {
+      content: $desafio-at; 
+    }
+  }
+  .desafio-eyedropper {
+    &:before {
+      content: $desafio-eyedropper; 
+    }
+  }
+  .desafio-paint-brush {
+    &:before {
+      content: $desafio-paint-brush; 
+    }
+  }
+  .desafio-birthday-cake {
+    &:before {
+      content: $desafio-birthday-cake; 
+    }
+  }
+  .desafio-area-chart {
+    &:before {
+      content: $desafio-area-chart; 
+    }
+  }
+  .desafio-pie-chart {
+    &:before {
+      content: $desafio-pie-chart; 
+    }
+  }
+  .desafio-line-chart {
+    &:before {
+      content: $desafio-line-chart; 
+    }
+  }
+  .desafio-lastfm {
+    &:before {
+      content: $desafio-lastfm; 
+    }
+  }
+  .desafio-lastfm-square {
+    &:before {
+      content: $desafio-lastfm-square; 
+    }
+  }
+  .desafio-toggle-off {
+    &:before {
+      content: $desafio-toggle-off; 
+    }
+  }
+  .desafio-toggle-on {
+    &:before {
+      content: $desafio-toggle-on; 
+    }
+  }
+  .desafio-bicycle {
+    &:before {
+      content: $desafio-bicycle; 
+    }
+  }
+  .desafio-bus {
+    &:before {
+      content: $desafio-bus; 
+    }
+  }
+  .desafio-ioxhost {
+    &:before {
+      content: $desafio-ioxhost; 
+    }
+  }
+  .desafio-angellist {
+    &:before {
+      content: $desafio-angellist; 
+    }
+  }
+  .desafio-cc {
+    &:before {
+      content: $desafio-cc; 
+    }
+  }
+  .desafio-ils {
+    &:before {
+      content: $desafio-ils; 
+    }
+  }
+  .desafio-shekel {
+    &:before {
+      content: $desafio-shekel; 
+    }
+  }
+  .desafio-sheqel {
+    &:before {
+      content: $desafio-sheqel; 
+    }
+  }
+  .desafio-meanpath {
+    &:before {
+      content: $desafio-meanpath; 
+    }
+  }
+  .desafio-buysellads {
+    &:before {
+      content: $desafio-buysellads; 
+    }
+  }
+  .desafio-connectdevelop {
+    &:before {
+      content: $desafio-connectdevelop; 
+    }
+  }
+  .desafio-dashcube {
+    &:before {
+      content: $desafio-dashcube; 
+    }
+  }
+  .desafio-forumbee {
+    &:before {
+      content: $desafio-forumbee; 
+    }
+  }
+  .desafio-leanpub {
+    &:before {
+      content: $desafio-leanpub; 
+    }
+  }
+  .desafio-sellsy {
+    &:before {
+      content: $desafio-sellsy; 
+    }
+  }
+  .desafio-shirtsinbulk {
+    &:before {
+      content: $desafio-shirtsinbulk; 
+    }
+  }
+  .desafio-simplybuilt {
+    &:before {
+      content: $desafio-simplybuilt; 
+    }
+  }
+  .desafio-skyatlas {
+    &:before {
+      content: $desafio-skyatlas; 
+    }
+  }
+  .desafio-cart-plus {
+    &:before {
+      content: $desafio-cart-plus; 
+    }
+  }
+  .desafio-cart-arrow-down {
+    &:before {
+      content: $desafio-cart-arrow-down; 
+    }
+  }
+  .desafio-diamond {
+    &:before {
+      content: $desafio-diamond; 
+    }
+  }
+  .desafio-ship {
+    &:before {
+      content: $desafio-ship; 
+    }
+  }
+  .desafio-user-secret {
+    &:before {
+      content: $desafio-user-secret; 
+    }
+  }
+  .desafio-motorcycle {
+    &:before {
+      content: $desafio-motorcycle; 
+    }
+  }
+  .desafio-street-view {
+    &:before {
+      content: $desafio-street-view; 
+    }
+  }
+  .desafio-heartbeat {
+    &:before {
+      content: $desafio-heartbeat; 
+    }
+  }
+  .desafio-venus {
+    &:before {
+      content: $desafio-venus; 
+    }
+  }
+  .desafio-mars {
+    &:before {
+      content: $desafio-mars; 
+    }
+  }
+  .desafio-mercury {
+    &:before {
+      content: $desafio-mercury; 
+    }
+  }
+  .desafio-intersex {
+    &:before {
+      content: $desafio-intersex; 
+    }
+  }
+  .desafio-transgender {
+    &:before {
+      content: $desafio-transgender; 
+    }
+  }
+  .desafio-transgender-alt {
+    &:before {
+      content: $desafio-transgender-alt; 
+    }
+  }
+  .desafio-venus-double {
+    &:before {
+      content: $desafio-venus-double; 
+    }
+  }
+  .desafio-mars-double {
+    &:before {
+      content: $desafio-mars-double; 
+    }
+  }
+  .desafio-venus-mars {
+    &:before {
+      content: $desafio-venus-mars; 
+    }
+  }
+  .desafio-mars-stroke {
+    &:before {
+      content: $desafio-mars-stroke; 
+    }
+  }
+  .desafio-mars-stroke-v {
+    &:before {
+      content: $desafio-mars-stroke-v; 
+    }
+  }
+  .desafio-mars-stroke-h {
+    &:before {
+      content: $desafio-mars-stroke-h; 
+    }
+  }
+  .desafio-neuter {
+    &:before {
+      content: $desafio-neuter; 
+    }
+  }
+  .desafio-genderless {
+    &:before {
+      content: $desafio-genderless; 
+    }
+  }
+  .desafio-facebook-official {
+    &:before {
+      content: $desafio-facebook-official; 
+    }
+  }
+  .desafio-pinterest-p {
+    &:before {
+      content: $desafio-pinterest-p; 
+    }
+  }
+  .desafio-whatsapp {
+    &:before {
+      content: $desafio-whatsapp; 
+    }
+  }
+  .desafio-server {
+    &:before {
+      content: $desafio-server; 
+    }
+  }
+  .desafio-user-plus {
+    &:before {
+      content: $desafio-user-plus; 
+    }
+  }
+  .desafio-user-times {
+    &:before {
+      content: $desafio-user-times; 
+    }
+  }
+  .desafio-bed {
+    &:before {
+      content: $desafio-bed; 
+    }
+  }
+  .desafio-hotel {
+    &:before {
+      content: $desafio-hotel; 
+    }
+  }
+  .desafio-viacoin {
+    &:before {
+      content: $desafio-viacoin; 
+    }
+  }
+  .desafio-train {
+    &:before {
+      content: $desafio-train; 
+    }
+  }
+  .desafio-subway {
+    &:before {
+      content: $desafio-subway; 
+    }
+  }
+  .desafio-medium {
+    &:before {
+      content: $desafio-medium; 
+    }
+  }
+  .desafio-y-combinator {
+    &:before {
+      content: $desafio-y-combinator; 
+    }
+  }
+  .desafio-yc {
+    &:before {
+      content: $desafio-yc; 
+    }
+  }
+  .desafio-optin-monster {
+    &:before {
+      content: $desafio-optin-monster; 
+    }
+  }
+  .desafio-opencart {
+    &:before {
+      content: $desafio-opencart; 
+    }
+  }
+  .desafio-expeditedssl {
+    &:before {
+      content: $desafio-expeditedssl; 
+    }
+  }
+  .desafio-battery {
+    &:before {
+      content: $desafio-battery; 
+    }
+  }
+  .desafio-battery-4 {
+    &:before {
+      content: $desafio-battery-4; 
+    }
+  }
+  .desafio-battery-full {
+    &:before {
+      content: $desafio-battery-full; 
+    }
+  }
+  .desafio-battery-3 {
+    &:before {
+      content: $desafio-battery-3; 
+    }
+  }
+  .desafio-battery-three-quarters {
+    &:before {
+      content: $desafio-battery-three-quarters; 
+    }
+  }
+  .desafio-battery-2 {
+    &:before {
+      content: $desafio-battery-2; 
+    }
+  }
+  .desafio-battery-half {
+    &:before {
+      content: $desafio-battery-half; 
+    }
+  }
+  .desafio-battery-1 {
+    &:before {
+      content: $desafio-battery-1; 
+    }
+  }
+  .desafio-battery-quarter {
+    &:before {
+      content: $desafio-battery-quarter; 
+    }
+  }
+  .desafio-battery-0 {
+    &:before {
+      content: $desafio-battery-0; 
+    }
+  }
+  .desafio-battery-empty {
+    &:before {
+      content: $desafio-battery-empty; 
+    }
+  }
+  .desafio-mouse-pointer {
+    &:before {
+      content: $desafio-mouse-pointer; 
+    }
+  }
+  .desafio-i-cursor {
+    &:before {
+      content: $desafio-i-cursor; 
+    }
+  }
+  .desafio-object-group {
+    &:before {
+      content: $desafio-object-group; 
+    }
+  }
+  .desafio-object-ungroup {
+    &:before {
+      content: $desafio-object-ungroup; 
+    }
+  }
+  .desafio-sticky-note {
+    &:before {
+      content: $desafio-sticky-note; 
+    }
+  }
+  .desafio-sticky-note-o {
+    &:before {
+      content: $desafio-sticky-note-o; 
+    }
+  }
+  .desafio-cc-jcb {
+    &:before {
+      content: $desafio-cc-jcb; 
+    }
+  }
+  .desafio-cc-diners-club {
+    &:before {
+      content: $desafio-cc-diners-club; 
+    }
+  }
+  .desafio-clone {
+    &:before {
+      content: $desafio-clone; 
+    }
+  }
+  .desafio-balance-scale {
+    &:before {
+      content: $desafio-balance-scale; 
+    }
+  }
+  .desafio-hourglass-o {
+    &:before {
+      content: $desafio-hourglass-o; 
+    }
+  }
+  .desafio-hourglass-1 {
+    &:before {
+      content: $desafio-hourglass-1; 
+    }
+  }
+  .desafio-hourglass-start {
+    &:before {
+      content: $desafio-hourglass-start; 
+    }
+  }
+  .desafio-hourglass-2 {
+    &:before {
+      content: $desafio-hourglass-2; 
+    }
+  }
+  .desafio-hourglass-half {
+    &:before {
+      content: $desafio-hourglass-half; 
+    }
+  }
+  .desafio-hourglass-3 {
+    &:before {
+      content: $desafio-hourglass-3; 
+    }
+  }
+  .desafio-hourglass-end {
+    &:before {
+      content: $desafio-hourglass-end; 
+    }
+  }
+  .desafio-hourglass {
+    &:before {
+      content: $desafio-hourglass; 
+    }
+  }
+  .desafio-hand-grab-o {
+    &:before {
+      content: $desafio-hand-grab-o; 
+    }
+  }
+  .desafio-hand-rock-o {
+    &:before {
+      content: $desafio-hand-rock-o; 
+    }
+  }
+  .desafio-hand-paper-o {
+    &:before {
+      content: $desafio-hand-paper-o; 
+    }
+  }
+  .desafio-hand-stop-o {
+    &:before {
+      content: $desafio-hand-stop-o; 
+    }
+  }
+  .desafio-hand-scissors-o {
+    &:before {
+      content: $desafio-hand-scissors-o; 
+    }
+  }
+  .desafio-hand-lizard-o {
+    &:before {
+      content: $desafio-hand-lizard-o; 
+    }
+  }
+  .desafio-hand-spock-o {
+    &:before {
+      content: $desafio-hand-spock-o; 
+    }
+  }
+  .desafio-hand-pointer-o {
+    &:before {
+      content: $desafio-hand-pointer-o; 
+    }
+  }
+  .desafio-hand-peace-o {
+    &:before {
+      content: $desafio-hand-peace-o; 
+    }
+  }
+  .desafio-trademark {
+    &:before {
+      content: $desafio-trademark; 
+    }
+  }
+  .desafio-registered {
+    &:before {
+      content: $desafio-registered; 
+    }
+  }
+  .desafio-creative-commons {
+    &:before {
+      content: $desafio-creative-commons; 
+    }
+  }
+  .desafio-gg {
+    &:before {
+      content: $desafio-gg; 
+    }
+  }
+  .desafio-gg-circle {
+    &:before {
+      content: $desafio-gg-circle; 
+    }
+  }
+  .desafio-tripadvisor {
+    &:before {
+      content: $desafio-tripadvisor; 
+    }
+  }
+  .desafio-odnoklassniki {
+    &:before {
+      content: $desafio-odnoklassniki; 
+    }
+  }
+  .desafio-odnoklassniki-square {
+    &:before {
+      content: $desafio-odnoklassniki-square; 
+    }
+  }
+  .desafio-get-pocket {
+    &:before {
+      content: $desafio-get-pocket; 
+    }
+  }
+  .desafio-wikipedia-w {
+    &:before {
+      content: $desafio-wikipedia-w; 
+    }
+  }
+  .desafio-safari {
+    &:before {
+      content: $desafio-safari; 
+    }
+  }
+  .desafio-chrome {
+    &:before {
+      content: $desafio-chrome; 
+    }
+  }
+  .desafio-firefox {
+    &:before {
+      content: $desafio-firefox; 
+    }
+  }
+  .desafio-opera {
+    &:before {
+      content: $desafio-opera; 
+    }
+  }
+  .desafio-internet-explorer {
+    &:before {
+      content: $desafio-internet-explorer; 
+    }
+  }
+  .desafio-television {
+    &:before {
+      content: $desafio-television; 
+    }
+  }
+  .desafio-tv {
+    &:before {
+      content: $desafio-tv; 
+    }
+  }
+  .desafio-contao {
+    &:before {
+      content: $desafio-contao; 
+    }
+  }
+  .desafio-500px {
+    &:before {
+      content: $desafio-500px; 
+    }
+  }
+  .desafio-amazon {
+    &:before {
+      content: $desafio-amazon; 
+    }
+  }
+  .desafio-calendar-plus-o {
+    &:before {
+      content: $desafio-calendar-plus-o; 
+    }
+  }
+  .desafio-calendar-minus-o {
+    &:before {
+      content: $desafio-calendar-minus-o; 
+    }
+  }
+  .desafio-calendar-times-o {
+    &:before {
+      content: $desafio-calendar-times-o; 
+    }
+  }
+  .desafio-calendar-check-o {
+    &:before {
+      content: $desafio-calendar-check-o; 
+    }
+  }
+  .desafio-industry {
+    &:before {
+      content: $desafio-industry; 
+    }
+  }
+  .desafio-map-pin {
+    &:before {
+      content: $desafio-map-pin; 
+    }
+  }
+  .desafio-map-signs {
+    &:before {
+      content: $desafio-map-signs; 
+    }
+  }
+  .desafio-map-o {
+    &:before {
+      content: $desafio-map-o; 
+    }
+  }
+  .desafio-map {
+    &:before {
+      content: $desafio-map; 
+    }
+  }
+  .desafio-commenting {
+    &:before {
+      content: $desafio-commenting; 
+    }
+  }
+  .desafio-commenting-o {
+    &:before {
+      content: $desafio-commenting-o; 
+    }
+  }
+  .desafio-houzz {
+    &:before {
+      content: $desafio-houzz; 
+    }
+  }
+  .desafio-vimeo {
+    &:before {
+      content: $desafio-vimeo; 
+    }
+  }
+  .desafio-black-tie {
+    &:before {
+      content: $desafio-black-tie; 
+    }
+  }
+  .desafio-fonticons {
+    &:before {
+      content: $desafio-fonticons; 
+    }
+  }
+  .desafio-reddit-alien {
+    &:before {
+      content: $desafio-reddit-alien; 
+    }
+  }
+  .desafio-edge {
+    &:before {
+      content: $desafio-edge; 
+    }
+  }
+  .desafio-credit-card-alt {
+    &:before {
+      content: $desafio-credit-card-alt; 
+    }
+  }
+  .desafio-codiepie {
+    &:before {
+      content: $desafio-codiepie; 
+    }
+  }
+  .desafio-modx {
+    &:before {
+      content: $desafio-modx; 
+    }
+  }
+  .desafio-fort-awesome {
+    &:before {
+      content: $desafio-fort-awesome; 
+    }
+  }
+  .desafio-usb {
+    &:before {
+      content: $desafio-usb; 
+    }
+  }
+  .desafio-product-hunt {
+    &:before {
+      content: $desafio-product-hunt; 
+    }
+  }
+  .desafio-mixcloud {
+    &:before {
+      content: $desafio-mixcloud; 
+    }
+  }
+  .desafio-scribd {
+    &:before {
+      content: $desafio-scribd; 
+    }
+  }
+  .desafio-pause-circle {
+    &:before {
+      content: $desafio-pause-circle; 
+    }
+  }
+  .desafio-pause-circle-o {
+    &:before {
+      content: $desafio-pause-circle-o; 
+    }
+  }
+  .desafio-stop-circle {
+    &:before {
+      content: $desafio-stop-circle; 
+    }
+  }
+  .desafio-stop-circle-o {
+    &:before {
+      content: $desafio-stop-circle-o; 
+    }
+  }
+  .desafio-shopping-bag {
+    &:before {
+      content: $desafio-shopping-bag; 
+    }
+  }
+  .desafio-shopping-basket {
+    &:before {
+      content: $desafio-shopping-basket; 
+    }
+  }
+  .desafio-hashtag {
+    &:before {
+      content: $desafio-hashtag; 
+    }
+  }
+  .desafio-bluetooth {
+    &:before {
+      content: $desafio-bluetooth; 
+    }
+  }
+  .desafio-bluetooth-b {
+    &:before {
+      content: $desafio-bluetooth-b; 
+    }
+  }
+  .desafio-percent {
+    &:before {
+      content: $desafio-percent; 
+    }
+  }
+  .desafio-gitlab {
+    &:before {
+      content: $desafio-gitlab; 
+    }
+  }
+  .desafio-wpbeginner {
+    &:before {
+      content: $desafio-wpbeginner; 
+    }
+  }
+  .desafio-wpforms {
+    &:before {
+      content: $desafio-wpforms; 
+    }
+  }
+  .desafio-envira {
+    &:before {
+      content: $desafio-envira; 
+    }
+  }
+  .desafio-universal-access {
+    &:before {
+      content: $desafio-universal-access; 
+    }
+  }
+  .desafio-wheelchair-alt {
+    &:before {
+      content: $desafio-wheelchair-alt; 
+    }
+  }
+  .desafio-question-circle-o {
+    &:before {
+      content: $desafio-question-circle-o; 
+    }
+  }
+  .desafio-blind {
+    &:before {
+      content: $desafio-blind; 
+    }
+  }
+  .desafio-audio-description {
+    &:before {
+      content: $desafio-audio-description; 
+    }
+  }
+  .desafio-volume-control-phone {
+    &:before {
+      content: $desafio-volume-control-phone; 
+    }
+  }
+  .desafio-braille {
+    &:before {
+      content: $desafio-braille; 
+    }
+  }
+  .desafio-assistive-listening-systems {
+    &:before {
+      content: $desafio-assistive-listening-systems; 
+    }
+  }
+  .desafio-american-sign-language-interpreting {
+    &:before {
+      content: $desafio-american-sign-language-interpreting; 
+    }
+  }
+  .desafio-asl-interpreting {
+    &:before {
+      content: $desafio-asl-interpreting; 
+    }
+  }
+  .desafio-deaf {
+    &:before {
+      content: $desafio-deaf; 
+    }
+  }
+  .desafio-deafness {
+    &:before {
+      content: $desafio-deafness; 
+    }
+  }
+  .desafio-hard-of-hearing {
+    &:before {
+      content: $desafio-hard-of-hearing; 
+    }
+  }
+  .desafio-glide {
+    &:before {
+      content: $desafio-glide; 
+    }
+  }
+  .desafio-glide-g {
+    &:before {
+      content: $desafio-glide-g; 
+    }
+  }
+  .desafio-sign-language {
+    &:before {
+      content: $desafio-sign-language; 
+    }
+  }
+  .desafio-signing {
+    &:before {
+      content: $desafio-signing; 
+    }
+  }
+  .desafio-low-vision {
+    &:before {
+      content: $desafio-low-vision; 
+    }
+  }
+  .desafio-viadeo {
+    &:before {
+      content: $desafio-viadeo; 
+    }
+  }
+  .desafio-viadeo-square {
+    &:before {
+      content: $desafio-viadeo-square; 
+    }
+  }
+  .desafio-snapchat {
+    &:before {
+      content: $desafio-snapchat; 
+    }
+  }
+  .desafio-snapchat-ghost {
+    &:before {
+      content: $desafio-snapchat-ghost; 
+    }
+  }
+  .desafio-snapchat-square {
+    &:before {
+      content: $desafio-snapchat-square; 
+    }
+  }
+  .desafio-pied-piper {
+    &:before {
+      content: $desafio-pied-piper; 
+    }
+  }
+  .desafio-first-order {
+    &:before {
+      content: $desafio-first-order; 
+    }
+  }
+  .desafio-yoast {
+    &:before {
+      content: $desafio-yoast; 
+    }
+  }
+  .desafio-themeisle {
+    &:before {
+      content: $desafio-themeisle; 
+    }
+  }
+  .desafio-google-plus-circle {
+    &:before {
+      content: $desafio-google-plus-circle; 
+    }
+  }
+  .desafio-google-plus-official {
+    &:before {
+      content: $desafio-google-plus-official; 
+    }
+  }
+  .desafio-fa {
+    &:before {
+      content: $desafio-fa; 
+    }
+  }
+  .desafio-font-awesome {
+    &:before {
+      content: $desafio-font-awesome; 
+    }
+  }
+  .desafio-handshake-o {
+    &:before {
+      content: $desafio-handshake-o; 
+    }
+  }
+  .desafio-envelope-open {
+    &:before {
+      content: $desafio-envelope-open; 
+    }
+  }
+  .desafio-envelope-open-o {
+    &:before {
+      content: $desafio-envelope-open-o; 
+    }
+  }
+  .desafio-linode {
+    &:before {
+      content: $desafio-linode; 
+    }
+  }
+  .desafio-address-book {
+    &:before {
+      content: $desafio-address-book; 
+    }
+  }
+  .desafio-address-book-o {
+    &:before {
+      content: $desafio-address-book-o; 
+    }
+  }
+  .desafio-address-card {
+    &:before {
+      content: $desafio-address-card; 
+    }
+  }
+  .desafio-vcard {
+    &:before {
+      content: $desafio-vcard; 
+    }
+  }
+  .desafio-address-card-o {
+    &:before {
+      content: $desafio-address-card-o; 
+    }
+  }
+  .desafio-vcard-o {
+    &:before {
+      content: $desafio-vcard-o; 
+    }
+  }
+  .desafio-user-circle {
+    &:before {
+      content: $desafio-user-circle; 
+    }
+  }
+  .desafio-user-circle-o {
+    &:before {
+      content: $desafio-user-circle-o; 
+    }
+  }
+  .desafio-user-o {
+    &:before {
+      content: $desafio-user-o; 
+    }
+  }
+  .desafio-id-badge {
+    &:before {
+      content: $desafio-id-badge; 
+    }
+  }
+  .desafio-drivers-license {
+    &:before {
+      content: $desafio-drivers-license; 
+    }
+  }
+  .desafio-id-card {
+    &:before {
+      content: $desafio-id-card; 
+    }
+  }
+  .desafio-drivers-license-o {
+    &:before {
+      content: $desafio-drivers-license-o; 
+    }
+  }
+  .desafio-id-card-o {
+    &:before {
+      content: $desafio-id-card-o; 
+    }
+  }
+  .desafio-quora {
+    &:before {
+      content: $desafio-quora; 
+    }
+  }
+  .desafio-free-code-camp {
+    &:before {
+      content: $desafio-free-code-camp; 
+    }
+  }
+  .desafio-telegram {
+    &:before {
+      content: $desafio-telegram; 
+    }
+  }
+  .desafio-thermometer {
+    &:before {
+      content: $desafio-thermometer; 
+    }
+  }
+  .desafio-thermometer-4 {
+    &:before {
+      content: $desafio-thermometer-4; 
+    }
+  }
+  .desafio-thermometer-full {
+    &:before {
+      content: $desafio-thermometer-full; 
+    }
+  }
+  .desafio-thermometer-3 {
+    &:before {
+      content: $desafio-thermometer-3; 
+    }
+  }
+  .desafio-thermometer-three-quarters {
+    &:before {
+      content: $desafio-thermometer-three-quarters; 
+    }
+  }
+  .desafio-thermometer-2 {
+    &:before {
+      content: $desafio-thermometer-2; 
+    }
+  }
+  .desafio-thermometer-half {
+    &:before {
+      content: $desafio-thermometer-half; 
+    }
+  }
+  .desafio-thermometer-1 {
+    &:before {
+      content: $desafio-thermometer-1; 
+    }
+  }
+  .desafio-thermometer-quarter {
+    &:before {
+      content: $desafio-thermometer-quarter; 
+    }
+  }
+  .desafio-thermometer-0 {
+    &:before {
+      content: $desafio-thermometer-0; 
+    }
+  }
+  .desafio-thermometer-empty {
+    &:before {
+      content: $desafio-thermometer-empty; 
+    }
+  }
+  .desafio-shower {
+    &:before {
+      content: $desafio-shower; 
+    }
+  }
+  .desafio-bath {
+    &:before {
+      content: $desafio-bath; 
+    }
+  }
+  .desafio-bathtub {
+    &:before {
+      content: $desafio-bathtub; 
+    }
+  }
+  .desafio-s15 {
+    &:before {
+      content: $desafio-s15; 
+    }
+  }
+  .desafio-podcast {
+    &:before {
+      content: $desafio-podcast; 
+    }
+  }
+  .desafio-window-maximize {
+    &:before {
+      content: $desafio-window-maximize; 
+    }
+  }
+  .desafio-window-minimize {
+    &:before {
+      content: $desafio-window-minimize; 
+    }
+  }
+  .desafio-window-restore {
+    &:before {
+      content: $desafio-window-restore; 
+    }
+  }
+  .desafio-times-rectangle {
+    &:before {
+      content: $desafio-times-rectangle; 
+    }
+  }
+  .desafio-window-close {
+    &:before {
+      content: $desafio-window-close; 
+    }
+  }
+  .desafio-times-rectangle-o {
+    &:before {
+      content: $desafio-times-rectangle-o; 
+    }
+  }
+  .desafio-window-close-o {
+    &:before {
+      content: $desafio-window-close-o; 
+    }
+  }
+  .desafio-bandcamp {
+    &:before {
+      content: $desafio-bandcamp; 
+    }
+  }
+  .desafio-grav {
+    &:before {
+      content: $desafio-grav; 
+    }
+  }
+  .desafio-etsy {
+    &:before {
+      content: $desafio-etsy; 
+    }
+  }
+  .desafio-imdb {
+    &:before {
+      content: $desafio-imdb; 
+    }
+  }
+  .desafio-ravelry {
+    &:before {
+      content: $desafio-ravelry; 
+    }
+  }
+  .desafio-eercast {
+    &:before {
+      content: $desafio-eercast; 
+    }
+  }
+  .desafio-microchip {
+    &:before {
+      content: $desafio-microchip; 
+    }
+  }
+  .desafio-snowflake-o {
+    &:before {
+      content: $desafio-snowflake-o; 
+    }
+  }
+  .desafio-superpowers {
+    &:before {
+      content: $desafio-superpowers; 
+    }
+  }
+  .desafio-wpexplorer {
+    &:before {
+      content: $desafio-wpexplorer; 
+    }
+  }
+  .desafio-meetup {
+    &:before {
+      content: $desafio-meetup; 
+    }
+  }
+  
+  
