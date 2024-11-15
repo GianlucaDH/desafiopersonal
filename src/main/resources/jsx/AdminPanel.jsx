@@ -66,7 +66,6 @@ const AdminPanel = () => {
               <tr key={hotel.id}>
                   <td>{hotel.id}</td>
                   <td>
-                    <img src={hotel.images.split(',')[0]} alt="" />
                     {hotel.title}
                   </td>
                   <td>{hotel.category}</td>

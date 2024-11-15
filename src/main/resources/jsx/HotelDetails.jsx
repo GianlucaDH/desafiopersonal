@@ -47,7 +47,7 @@ function HotelDetails() {
             <div>
             <h1>{hotel.title}</h1>
             <p>Ubicación: {hotel.locationText}</p>
-            <p>Descripción: {hotel.descripcion}</p>
+            <p>Descripción: {hotel.description}</p>
             <p>Precio por noche: ${hotel.price}</p>
             </div>
         ) : (

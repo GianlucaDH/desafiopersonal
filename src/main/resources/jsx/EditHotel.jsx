@@ -2,64 +2,71 @@ import React, { useState, useEffect } from 'react';
 import Footer from "./components/footer"
 import Header from "./components/header"
 import axios from 'axios';
+import { useLocation, useNavigate } from 'react-router-dom';
 
-const NewHotel = () => {
-    const [hotel, setHotel] = useState({
-      title: '',
-      description: '',
-      locationText: '',
-      votes: 0,
-      rating: 0,
-      imageUrl: '',
-      category: '',
-      price: 1.01
-    });
+const EditHotel = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
   
-    const [message, setMessage] = useState('');
-  
-    // Maneja el cambio en los campos de texto
-    const handleChange = (e) => {
+  // Función para obtener el ID desde el query string
+  const getIdFromQueryString = () => {
+      const params = new URLSearchParams(location.search);
+      return params.get('id');
+  };
+
+  const id = getIdFromQueryString(); // Obtener el ID del query string
+
+  const [hotel, setHotel] = useState({
+    title: '',
+    description: '',
+    locationText: '',
+    votes: 0,
+    rating: 0,
+    imageUrl: '',
+    category: '',
+    price: 1.01
+  });
+  const [message, setMessage] = useState('');
+
+  // Obtener los datos del hotel para editarlos
+  useEffect(() => {
+      if (id) {
+          axios.get(`/api/hotels/${id}`)
+              .then(response => setHotel(response.data))
+              .catch(error => console.error("Error al obtener el hotel:", error));
+      }
+  }, [id]);
+
+  // Maneja los cambios en el formulario
+  const handleChange = (e) => {
+      const { name, value } = e.target;
       setHotel({
-        ...hotel,
-        [e.target.name]: e.target.value
+          ...hotel,
+          [name]: value
       });
-    };
-  
-    // Maneja el envío del formulario
-    const handleSubmit = (e) => {
+  };
+
+  // Enviar los datos actualizados
+  const handleSubmit = (e) => {
       e.preventDefault();
-      
-      // Envía los datos al backend (Spring Boot)
-      console.log(hotel);
-      axios.post('/api/hotels', hotel)
-        .then(response => {
-          setMessage('Hotel agregado correctamente.');
-          // Limpia el formulario
-          setHotel({
-            title: '',
-            description: '',
-            locationText: '',
-            votes: 0,
-            rating: 0,
-            imageUrl: '',
-            category: '',
-            price: 1.01
+
+      axios.put(`/api/hotels/${id}`, hotel)
+          .then(response => {
+              setMessage('Hotel actualizado correctamente.');
+              navigate(`/hotel?id=${id}`); // Redirige a la vista de detalles del hotel
+          })
+          .catch(error => {
+              console.error("Error al actualizar el hotel:", error);
+              setMessage(`Error al actualizar el hotel: ${error}`);
           });
-        })
-        .catch(error => {
-          console.error("Hubo un error al agregar el hotel:", error);
-          setMessage(`Error al agregar el hotel, ${error}.`);
-        });
-    };
-  
-    return (
-    <main className='app'>
-        <Header />
-            <section className='new-hotel'>
-                <h1>Agregar Hotel</h1>
-                {message && <p class="message">{message}</p>}
-                <form onSubmit={handleSubmit}>
-                <p>
+  };
+
+  return (
+      <div className="edit-hotel">
+          <h1>Editar Hotel</h1>
+          {message && <p className="message">{message}</p>}
+          <form onSubmit={handleSubmit}>
+          <p>
                     <label>Nombre del Hotel:</label>
                     <input
                     type="text"
@@ -118,12 +125,10 @@ const NewHotel = () => {
                     required
                     />
                 </p>
-                <button type="submit">Agregar Hotel</button>
-                </form>
-            </section>
-        <Footer />
-    </main>
-    );
+              <button type="submit">Guardar Cambios</button>
+          </form>
+      </div>
+  );
 };
 
-export default NewHotel;
+export default EditHotel;

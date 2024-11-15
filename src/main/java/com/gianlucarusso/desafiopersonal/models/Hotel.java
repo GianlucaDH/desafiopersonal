@@ -2,6 +2,8 @@ package com.gianlucarusso.desafiopersonal.models;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "hotels")
 public class Hotel {
@@ -16,8 +18,8 @@ public class Hotel {
     private float price;
     @Column(name = "location_text")
     private String locationText;
-    @Column(name = "images")
-    private String images;
+    @Column(name = "image_url")
+    private String imageUrl;
 
     public Long getId() {
         return id;
@@ -83,11 +85,11 @@ public class Hotel {
         this.locationText = locationText;
     }
 
-    public String getImages() {
-        return images;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setImages(String images) {
-        this.images = images;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }

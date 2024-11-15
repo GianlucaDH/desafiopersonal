@@ -5,8 +5,12 @@ import com.gianlucarusso.desafiopersonal.repositories.HotelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.nio.file.*;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -14,6 +18,8 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/hotels")
 public class HotelController {
+
+    private static final String IMAGE_DIRECTORY = "uploads/";
 
     @Autowired
     private HotelRepository hotelRepository;
@@ -31,9 +37,27 @@ public class HotelController {
 
     @CrossOrigin
     @PostMapping
-    public ResponseEntity<Hotel> createHotel(@RequestBody Hotel hotel) {
+    public ResponseEntity<String> createHotel(@RequestBody Hotel hotel) {
+        Optional<Hotel> existingHotel = hotelRepository.findByTitle(hotel.getTitle());
+
+        if (existingHotel.isPresent()) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("El hotel con ese nombre ya existe.");
+        }
+
         Hotel savedHotel = hotelRepository.save(hotel);
-        return ResponseEntity.status(HttpStatus.CREATED).body(savedHotel);
+        return ResponseEntity.status(HttpStatus.CREATED).body("Hotel creado exitosamente");
+    }
+
+    @CrossOrigin
+    @PutMapping("/{id}")
+    public ResponseEntity<Hotel> updateHotel(@PathVariable Long id, @RequestBody Hotel updatedHotel){
+        if(!hotelRepository.existsById(id)){
+            return ResponseEntity.notFound().build();
+        }
+
+        updatedHotel.setId(id);
+        Hotel savedHotel = hotelRepository.save(updatedHotel);
+        return ResponseEntity.ok(savedHotel);
     }
 
     @CrossOrigin
@@ -51,5 +75,12 @@ public class HotelController {
         List<Hotel> hotels = hotelRepository.findAll();
         Collections.shuffle(hotels);
         return hotels.stream().limit(10).toList();
+    }
+
+    @GetMapping("/admin")
+    @PreAuthorize("hasAuthority('ADMIN')")
+    public String admin()
+    {
+        return "Admin";
     }
 }
